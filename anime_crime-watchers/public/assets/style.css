@@ -1,10 +1,16 @@
-nav {
+* {
+
     background-color: black;
+}
+
+
+nav {
+    background-color: white;
 }
 
 main {
     color: white;
-    background-image: url(https://media1.giphy.com/media/iaN6GGk6S9TbutY27W/giphy.gif?cid=ecf05e475en7lnsaa79osk7d5232ulhvqgi063stubjk8ju8&rid=giphy.gif&ct=g);
+    /* background-image: url(https://media1.giphy.com/media/iaN6GGk6S9TbutY27W/giphy.gif?cid=ecf05e475en7lnsaa79osk7d5232ulhvqgi063stubjk8ju8&rid=giphy.gif&ct=g); */
 }
 
 footer.footer-section {
