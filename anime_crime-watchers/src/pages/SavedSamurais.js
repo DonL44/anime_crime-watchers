@@ -1,8 +1,6 @@
 import React from "react";
 import {
-  Jumbotron,
   Container,
-  CardColumns,
   Card,
   Button,
 } from "react-bootstrap";
@@ -43,11 +41,11 @@ const Savedsamurais = () => {
 
   return (
     <>
-      <Jumbotron fluid className="text-light bg-dark">
+      {/* <Jumbotron fluid className="text-light bg-dark"> */}
         <Container>
           <h1>Viewing saved samurais!</h1>
         </Container>
-      </Jumbotron>
+      {/* </Jumbotron> */}
       <Container>
         <h2>
           {userData.me.savedsamurais.length
@@ -56,7 +54,7 @@ const Savedsamurais = () => {
               }:`
             : "You have no saved samurais!"}
         </h2>
-        <CardColumns>
+        {/* <CardColumns>
           {userData.me.savedsamurais.map((samurai) => {
             return (
               <Card key={samurai.samuraiId} border="dark">
@@ -82,7 +80,7 @@ const Savedsamurais = () => {
               </Card>
             );
           })}
-        </CardColumns>
+        </CardColumns> */}
       </Container>
     </>
   );

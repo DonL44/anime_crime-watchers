@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import {
-  Jumbotron,
+  
   Container,
   Col,
   Form,
   Button,
   Card,
-  CardColumns,
+  
 } from "react-bootstrap";
 
 import Auth from "../utils/auth";
@@ -34,37 +34,37 @@ const Searchsamurais = () => {
   });
 
   // create method to search for samurais and set state on form submit
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
 
-    if (!searchInput) {
-      return false;
-    }
+  //   if (!searchInput) {
+  //     return false;
+  //   }
 
-    try {
-      const response = await searchGooglesamurais(searchInput);
+  //   try {
+  //     const response = await searchGooglesamurais(searchInput);
 
-      if (!response.ok) {
-        throw new Error("something went wrong!");
-      }
+  //     if (!response.ok) {
+  //       throw new Error("something went wrong!");
+  //     }
 
-      const { items } = await response.json();
+  //     const { items } = await response.json();
 
-      const samuraiData = items.map((samurai) => ({
-        samuraiId: samurai.id,
-        authors: samurai.volumeInfo.authors || ["No author to display"],
-        title: samurai.volumeInfo.title,
-        description: samurai.volumeInfo.description,
-        image: samurai.volumeInfo.imageLinks?.thumbnail || "",
-        link: samurai.volumeInfo.infoLink || "",
-      }));
+  //     const samuraiData = items.map((samurai) => ({
+  //       samuraiId: samurai.id,
+  //       authors: samurai.volumeInfo.authors || ["No author to display"],
+  //       title: samurai.volumeInfo.title,
+  //       description: samurai.volumeInfo.description,
+  //       image: samurai.volumeInfo.imageLinks?.thumbnail || "",
+  //       link: samurai.volumeInfo.infoLink || "",
+  //     }));
 
-      setSearchedsamurais(samuraiData);
-      setSearchInput("");
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  //     setSearchedsamurais(samuraiData);
+  //     setSearchInput("");
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
 
   const handleSavesamurai = async (samuraiId) => {
@@ -90,10 +90,10 @@ const Searchsamurais = () => {
 
   return (
     <>
-      <Jumbotron fluid className="text-light bg-dark">
+      {/* <Jumbotron fluid className="text-light bg-dark"> */}
         <Container>
           <h1>Search for samurais!</h1>
-          <Form onSubmit={handleFormSubmit}>
+          {/* <Form onSubmit={handleFormSubmit}> */}
             <Form.Row>
               <Col xs={12} md={8}>
                 <Form.Control
@@ -111,9 +111,9 @@ const Searchsamurais = () => {
                 </Button>
               </Col>
             </Form.Row>
-          </Form>
+          {/* </Form> */}
         </Container>
-      </Jumbotron>
+      {/* </Jumbotron> */}
 
       <Container>
         <h2>
@@ -121,7 +121,7 @@ const Searchsamurais = () => {
             ? `Viewing ${searchedsamurais.length} results:`
             : "Search for a samurai to begin"}
         </h2>
-        <CardColumns>
+        {/* <CardColumns>
           {searchedsamurais.map((samurai) => {
             return (
               <Card key={samurai.samuraiId} border="dark">
@@ -167,7 +167,7 @@ const Searchsamurais = () => {
               </Card>
             );
           })}
-        </CardColumns>
+        </CardColumns> */}
       </Container>
     </>
   );

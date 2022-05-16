@@ -1,8 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchCrimes from "./pages/SearchCrimes";
 import SavedSamurais from "./pages/SavedSamurais";
 import Navbar from "./components/Navbar";
+import About from './pages/aboutus';
+// import Gallery from './components/Gallery';
+// import ContactForm from './components/Contact';
+
 
 import {
   ApolloProvider,
@@ -43,12 +47,21 @@ function App() {
       <Router>
         <>
           <Navbar />
-          <Routes>
+          <Switch>
             <Route exact path="/" component={SearchCrimes} />
             <Route exact path="/saved" component={SavedSamurais} />
             <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
-          </Routes>
+          </Switch>
         </>
+        <>
+        {/* <main />
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+            <ContactForm></ContactForm>
+          </> */}
+     
+     </>
       </Router>
     </ApolloProvider>
   );
