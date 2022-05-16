@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Searchsamurais from "./pages/Searchsamurais";
-import Savedsamurais from "./pages/Savedsamurais";
+import SearchCrimes from "./pages/SearchCrimes";
+import SavedSamurais from "./pages/SavedSamurais";
 import Navbar from "./components/Navbar";
 
 import {
@@ -44,8 +44,8 @@ function App() {
         <>
           <Navbar />
           <Switch>
-            <Route exact path="/" component={Searchsamurais} />
-            <Route exact path="/saved" component={Savedsamurais} />
+            <Route exact path="/" component={SearchCrimes} />
+            <Route exact path="/saved" component={SavedSamurais} />
             <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
           </Switch>
         </>
