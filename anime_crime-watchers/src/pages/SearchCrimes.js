@@ -14,7 +14,7 @@ import Auth from "../utils/auth";
 import { savesamuraiIds, getSavedsamuraiIds } from "../utils/localStorage";
 
 import { useMutation } from "@apollo/client";
-import { SAVE_samurai } from "../utils/mutations";
+import { SAVE_SAMURAI } from "../utils/mutations";
 
 const Searchsamurais = () => {
   // create state for holding returned google api data
@@ -25,7 +25,7 @@ const Searchsamurais = () => {
   // create state to hold saved samuraiId values
   const [savedsamuraiIds, setSavedsamuraiIds] = useState(getSavedsamuraiIds());
 
-  const [savesamurai, { error }] = useMutation(SAVE_samurai);
+  const [savesamurai, { error }] = useMutation(SAVE_SAMURAI);
 
   // set up useEffect hook to save `savedsamuraiIds` list to localStorage on component unmount
   // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
