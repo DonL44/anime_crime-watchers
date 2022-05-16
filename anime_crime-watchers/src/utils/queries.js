@@ -1,20 +1,20 @@
-import gql from "graphql-tag";
+// import gql from "graphql-tag";
 
-export const QUERY_ME = gql`
-  {
-    me {
-      _id
-      username
-      email
-      samuraiCount
-      savedsamurais {
-        samuraiId
-        authors
-        description
-        title
-        image
-        link
-      }
-    }
-  }
-`;
+// export const QUERY_ME = gql`
+//   {
+//     me {
+//       _id
+//       username
+//       email
+//       samuraiCount
+//       savedsamurais {
+//         samuraiId
+//         authors
+//         description
+//         title
+//         image
+//         link
+//       }
+//     }
+//   }
+// `;

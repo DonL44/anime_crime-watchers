@@ -29,26 +29,26 @@ export const getMe = (token) => {
   };
   
   // save samurai data for a logged in user
-  export const savesamurai = (samuraiData, token) => {
-    return fetch('/api/users', {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(samuraiData),
-    });
-  };
+  // export const savesamurai = (samuraiData, token) => {
+  //   return fetch('/api/users', {
+  //     method: 'PUT',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       authorization: `Bearer ${token}`,
+  //     },
+  //     body: JSON.stringify(samuraiData),
+  //   });
+  // };
   
-  // remove saved samurai data for a logged in user
-  export const deletesamurai = (samuraiId, token) => {
-    return fetch(`/api/users/samurais/${samuraiId}`, {
-      method: 'DELETE',
-      headers: {
-        authorization: `Bearer ${token}`,
-      },
-    });
-  };
+  // // remove saved samurai data for a logged in user
+  // export const deletesamurai = (samuraiId, token) => {
+  //   return fetch(`/api/users/samurais/${samuraiId}`, {
+  //     method: 'DELETE',
+  //     headers: {
+  //       authorization: `Bearer ${token}`,
+  //     },
+  //   });
+  // };
   
   // make a search to maps api for crimes
 
