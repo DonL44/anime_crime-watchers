@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-const About = () => {
+const Blog = () => {
   return (
     <section className='section'>
-      <h2>About</h2>
+      <h2>Blog</h2>
       <Link to='/' className='btn'>
         Back Home
       </Link>
     </section>
   );
 };
-export default About;
+export default Blog;

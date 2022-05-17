@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 // import SearchCrimes from "./pages/SearchCrimes";
 // import SavedSamurais from "./pages/SavedSamurais";
 import Navbar from "./components/Navbar";
@@ -15,6 +15,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import LoginForm from "./components/LoginForm";
 
 // Link to the GraphQL server on the backend
 const httpLink = createHttpLink({
@@ -44,13 +45,20 @@ function App() {
   return (
     // Enable entire app to interact with the Apollo Client instance
     <ApolloProvider client={client}>
+      <BrowserRouter>
       <Router>
         <>
           <Navbar />
           <Routes>
+            {/* <Route path="/" element={<Home />} /> */}
+            {/* <Route path="aboutus" element={<About-Us />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="contactus" element={<Contact-Us />} /> */}
             {/* <Route exact path="/" component={SearchCrimes} />
             <Route exact path="/saved" component={SavedSamurais} /> */}
-            <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
+            {/* <Route path="*" element={<Error />} /> */}
           </Routes>
         </>
         <>
