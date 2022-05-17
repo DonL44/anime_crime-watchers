@@ -1,0 +1,76 @@
+* {
+    color: black;
+    font-family: monospace;
+    font-weight: bold;
+  
+}
+
+
+nav {
+    background-color: #e5a31f;
+    margin-bottom: -.1%;
+    
+}
+
+main {
+    color: white;
+    background-color: red;
+    /* background-image: url(https://media1.giphy.com/media/iaN6GGk6S9TbutY27W/giphy.gif?cid=ecf05e475en7lnsaa79osk7d5232ulhvqgi063stubjk8ju8&rid=giphy.gif&ct=g); */
+}
+
+h1 {
+    font-size: 20px;
+  }
+
+
+.hero {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    margin-bottom: 15%;
+}
+
+.minamoto {
+    background-color: black;
+    padding-bottom: 2%;
+    
+    
+}
+
+.h1-large {
+    font-size: 35px;
+    width: 50%;
+    margin-left: 40%;
+    margin-top: -25%;
+    margin-bottom: 5%;
+    color: #e5a31f;
+    font-family: 'Rampart One', cursive;
+    display: flex;
+
+}
+
+.minamoto-p {
+    color: #e5a31f;
+    width: 40%;
+    margin-left: 45%;
+    margin-bottom: 5%;
+    text-align: center;
+
+}
+
+
+.find-crime-btn {
+    width: 10%;
+    height: 20%;
+    background-color: red;
+    display: flex;
+    margin-left: 60%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+footer.footer-section {
+    background-color: black;
+}
