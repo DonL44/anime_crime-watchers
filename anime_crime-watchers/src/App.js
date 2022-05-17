@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import SearchCrimes from "./pages/SearchCrimes";
 // import SavedSamurais from "./pages/SavedSamurais";
 import Navbar from "./components/Navbar";
@@ -47,11 +47,11 @@ function App() {
       <Router>
         <>
           <Navbar />
-          <Switch>
+          <Routes>
             {/* <Route exact path="/" component={SearchCrimes} />
             <Route exact path="/saved" component={SavedSamurais} /> */}
             <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
-          </Switch>
+          </Routes>
         </>
         <>
         {/* <main />
