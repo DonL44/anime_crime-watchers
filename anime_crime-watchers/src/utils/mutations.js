@@ -38,6 +38,7 @@ export const ADD_USER = gql`
 //         description
 //         title
 //         image
+// lololol
 //         link
 //       }
 //     }
