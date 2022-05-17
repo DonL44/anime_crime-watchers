@@ -23,6 +23,13 @@ const userSchema = new Schema(
     tipCount: {
       type: Number
     },
+    // location: {
+//  Is this going to be coordinates or name of a place?
+    // },
+    description: {
+      type: String,
+      minlength: 10
+    },
     posts: [
       {
         type: Schema.Types.ObjectId,
