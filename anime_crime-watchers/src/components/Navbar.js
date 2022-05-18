@@ -8,10 +8,11 @@ const Navbar = () => {
       <Link to='/Login'>Login</Link>
       <Link to='/Sign'>Sign Up</Link>
       <Link to='/Blog'>Blog</Link>
-      <Link to='/Products'>Products</Link>
       <Link to='/Contact'>Contact Us</Link>
       <Link to='/Submit'>Submit a crime tip</Link>
+      {/* https://www.crimetip.us/ */}
     </nav>
   );
 };
 export default Navbar;
+

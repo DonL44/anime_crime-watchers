@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 const Home = () => {
   return (
     <>
-      <h2>products</h2>
+      <h2>Blog</h2>
       <Outlet />
     </>
   );

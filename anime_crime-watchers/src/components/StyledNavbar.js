@@ -32,12 +32,12 @@ const Navbar = () => {
       >
         Blog
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to='/Products'
         className={({ isActive }) => (isActive ? 'link active' : 'link')}
       >
         Products
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to='/Contact'
         className={({ isActive }) => (isActive ? 'link active' : 'link')}
