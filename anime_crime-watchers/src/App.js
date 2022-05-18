@@ -1,17 +1,21 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import SearchBooks from "./pages/SearchBooks";
+// import SavedBooks from "./pages/SavedBooks";
+import Navbar from "./components/Navbar";
 import { useState } from 'react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
-import Contact from './pages/Contact';
 import Error from './pages/Error';
 import SharedLayout from './pages/SharedLayout';
-import SinglePost from './pages/SinglePost';
+import SingleBlog from './pages/SinglePost';
 import Dashboard from './pages/Dashboard';
 import Login from './components/Login';
 import Sign from './components/Sign';
 import ProtectedRoute from './pages/ProtectedRoute';
 import SharedBlogLayout from './pages/SharedBlogLayout';
+import Contact from './pages/Contact';
 
 import {
   ApolloProvider,
@@ -20,7 +24,6 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import Login from "./components/Login";
 
 // Link to the GraphQL server on the backend
 const httpLink = createHttpLink({
@@ -47,64 +50,50 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [user, setUser] = useState(null);
   return (
     // Enable entire app to interact with the Apollo Client instance
     <ApolloProvider client={client}>
-      <BrowserRouter>
       <Router>
         <>
           <Navbar />
           <Routes>
-            <Route path='/' element={<SharedLayout />}>
-            <Route index element={<Home />} />
-            <Route path="About" element={<About />} />
-            
-            <Route path='Login' element={<Login setUser={setUser}></Login>} />
-            <Route path='Dashboard' element={<ProtectedRoute user={user}>
-                <Dashboard user={user} /> 
+          <Route path='/' element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path='About' element={<About />} />
+          <Route path='Contact' element={<Contact />} />
+
+          <Route path='Blog' element={<SharedBlogLayout />}>
+          <Route index element={<Blog />} />
+          <Route path=':blogId' element={<SingleBlog />} />
+          </Route>
+
+          <Route path='Login' element={<Login setUser={setUser}></Login>} />
+          <Route
+            path='Dashboard'
+            element={
+              <ProtectedRoute user={user}>
+                <Dashboard user={user} />
               </ProtectedRoute>
             }
           />
-           <Route path='Sign' element={<Sign setUser={setUser}></Sign>} />
-            <Route path='Dashboard' element={<ProtectedRoute user={user}>
-                <Dashboard user={user} /> 
-              </ProtectedRoute>
-            }
-           />
-            <Route path='Blog' element={<SharedBlogLayout />}>
-            <Route index element={<Blog />} />
-            <Route path=':BlogId' element={<SinglePost />} />
-            </Route>
 
-            <Route path="Submit" element={<Submit />} />
-            <Route path="Contact" element={<Contact />} /> 
-            {/* <Route exact path="/" component={SearchCrimes} />
-            <Route exact path="/saved" component={SavedSamurais} />  */}
-            <Route path="*" element={<Error />} />
+          <Route path='Sign' element={<Sign setUser={setUser}></Sign>} />
+                    <Route
+                      path='Dashboard'
+                      element={
+                        <ProtectedRoute user={user}>
+                          <Dashboard user={user} />
+                        </ProtectedRoute>
+                      }
+                    />
+          <Route path='*' element={<Error />} />
+        </Route>
           </Routes>
         </>
-        <>
-        <main />
-          <>
-            <Gallery currentCategory={currentCategory}></Gallery>
-            <About></About>
-            <ContactForm></ContactForm>
-          </>
-     
-     </>
       </Router>
     </ApolloProvider>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
