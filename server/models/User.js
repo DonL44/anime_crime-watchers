@@ -20,9 +20,9 @@ const userSchema = new Schema(
       required: true,
       minlength: 5
     },
-    tipCount: {
-      type: Number
-    },
+    // tipCount: {
+    //   type: Number
+    // },
     // location: {
 //  Is this going to be coordinates or name of a place?
     // },
