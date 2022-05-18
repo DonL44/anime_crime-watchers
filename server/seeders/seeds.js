@@ -1,5 +1,5 @@
 const userSeeds = require('./userSeed.json');
-const postsSeeds = require('./postSeed.json');
+const postSeeds = require('./postSeed.json');
 const db = require('../config/connection');
 const { Post, User } = require('../models');
 
@@ -10,13 +10,13 @@ db.once('open', async () => {
 
     await User.create(userSeeds);
 
-    for (let i = 0; i < postsSeeds.length; i++) {
-      const { _id, postAuthor } = await Post.create(postsSeeds[i]);
+    for (let i = 0; i < postSeeds.length; i++) {
+      const { _id, postAuthor } = await Post.create(postSeeds[i]);
       const user = await User.findOneAndUpdate(
         { username: postAuthor },
         {
           $addToSet: {
-            thoughts: _id,
+            posts: _id,
           },
         }
       );
