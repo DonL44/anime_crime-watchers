@@ -6,40 +6,46 @@ const Navbar = () => {
         to='/'
         className={({ isActive }) => (isActive ? 'link active' : 'link')}
       >
-        Home
+        Hanzai Watchers
       </NavLink>
       <NavLink
-        to='/about'
+        to='/About'
         className={({ isActive }) => (isActive ? 'link active' : 'link')}
       >
         About
       </NavLink>
       <NavLink
-        to='/login'
+        to='/Login'
         className={({ isActive }) => (isActive ? 'link active' : 'link')}
       >
         Login
       </NavLink>
       <NavLink
-        to='/blog'
+        to='/Sign'
+        className={({ isActive }) => (isActive ? 'link active' : 'link')}
+      >
+        Sign Up
+      </NavLink>
+      <NavLink
+        to='/Blog'
         className={({ isActive }) => (isActive ? 'link active' : 'link')}
       >
         Blog
       </NavLink>
       <NavLink
-        to='/products'
+        to='/Products'
         className={({ isActive }) => (isActive ? 'link active' : 'link')}
       >
         Products
       </NavLink>
       <NavLink
-        to='/contactus'
+        to='/Contact'
         className={({ isActive }) => (isActive ? 'link active' : 'link')}
       >
         Contact Us
       </NavLink>
       <NavLink
-        to='/submit'
+        to='/Submit'
         className={({ isActive }) => (isActive ? 'link active' : 'link')}
       >
         Submit a Crime Tip
@@ -50,10 +56,6 @@ const Navbar = () => {
 export default Navbar;
 
 // import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
-// import SignUpForm from './SignupForm';
-// import LoginForm from './LoginForm';
 
 // import Auth from '../utils/auth';
 
