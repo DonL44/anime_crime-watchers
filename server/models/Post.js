@@ -7,7 +7,7 @@ const postSchema = new Schema(
       type: String,
       required: 'Let us know what this post is about!',
       minlength: 1,
-      maxlength: 25
+      maxlength: 60
     },
     postText: {
       type: String,
