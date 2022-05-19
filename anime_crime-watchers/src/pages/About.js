@@ -4,6 +4,7 @@ const About = () => {
     <section className='section'>
       <div>
       <h2>About</h2>
+      {/* <img src='../../../../reactfolio/src/assets/images/weatherdashboard.jpeg' className="my-2" alt="cover" />  */}
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex
         condimentum molestie. Mauris condimentum lectus ut ornare dignissim. Mauris faucibus urna

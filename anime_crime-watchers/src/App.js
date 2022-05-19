@@ -16,6 +16,7 @@ import Sign from './components/Sign';
 import ProtectedRoute from './pages/ProtectedRoute';
 import SharedBlogLayout from './pages/SharedBlogLayout';
 import Contact from './pages/Contact';
+// import './assets/style/style-homepage.css'
 
 import {
   ApolloProvider,
@@ -88,6 +89,7 @@ function App() {
                       }
                     />
           <Route path='*' element={<Error />} />
+          
         </Route>
           </Routes>
         </>
