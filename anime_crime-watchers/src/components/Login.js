@@ -1,25 +1,29 @@
-// see SignupForm.js for comments
-import React, { useState } from "react";
+// // see SignupForm.js for comments
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Form, Button, Alert } from "react-bootstrap";
-
 import Auth from "../utils/auth";
 
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
-const LoginForm = () => {
+
+const Login = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
+  const [login] = useMutation(LOGIN_USER);
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  const [login] = useMutation(LOGIN_USER);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
   };
 
+  const navigate = useNavigate();
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    
 
  
     const form = event.currentTarget;
@@ -43,7 +47,11 @@ const LoginForm = () => {
       email: "",
       password: "",
     });
+    navigate('/Dashboard');
+    
   };
+
+  
 
   return (
     <>
@@ -97,4 +105,7 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default Login;
+
+
+
