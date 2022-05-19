@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import BreadCrumb from '../../../components/common/BreadCrumb';
-import Footer from '../../../components/common/Footer';
-import Header from '../../../components/Home/Header';
-import ProfileArea from '../../../components/MyProfile/ProfileArea';
-import ProfileMenuArea from '../../../components/MyProfile/ProfileMenuArea';
+import BreadCrumb from '../components/common/BreadCrumb';
+import Footer from '../Footer';
+import Header from '../components/Home/Header';
+import ProfileArea from '../components/MyProfile/ProfileArea';
+import ProfileMenuArea from '../components/MyProfile/ProfileMenuArea';
 
 const MyProfile = () => {
     return (

@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import BreadCrumb from '../../../components/common/BreadCrumb';
-import Footer from '../../../components/common/Footer';
-import Header from '../../../components/Home/Header';
-import SignUp from '../../../components/Register/SignUp';
+import BreadCrumb from '../../components/common/BreadCrumb';
+import Footer from '../Footer';
+import Header from '../../components/Home/Header';
+import SignUp from '../../components/Register/SignUp';
 
 const Register = () => {
    return (

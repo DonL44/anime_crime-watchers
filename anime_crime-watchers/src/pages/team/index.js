@@ -1,9 +1,7 @@
 import Head from 'next/head';
-import BreadCrumb from '../../../components/common/BreadCrumb';
-import Header from '../../../components/Home/Header';
-import BrandArea from '../../../components/HomeTwo/BrandArea';
-import HomeTwoFooter from '../../../components/HomeTwo/HomeTwoFooter';
-import TeamArea from '../../../components/HomeTwo/TeamArea';
+import BreadCrumb from '../../components/common/BreadCrumb';
+import Header from '../../components/Home/Header';
+
 
 
 const Team = () => {
@@ -16,9 +14,7 @@ const Team = () => {
          <Header/>
          <BreadCrumb title="Our Team" subtitle="Team" />
          <TeamArea/>
-      
-         <BrandArea/>
-         <HomeTwoFooter/>
+    
       </>
    );
 };

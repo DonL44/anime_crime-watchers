@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import BreadCrumb from '../../../components/common/BreadCrumb';
-import ContactArea from '../../../components/Contact/ContactArea';
-import ContactFooter from '../../../components/Contact/ContactFooter';
+import BreadCrumb from '../../components/common/BreadCrumb';
+import ContactArea from '../../components/Contact/ContactArea';
+import ContactFooter from '../../components/Contact/ContactFooter';
 
-import Header from '../../../components/Home/Header';
+import Header from '../../components/Home/Header';
 
 const Contact = () => {
    return (

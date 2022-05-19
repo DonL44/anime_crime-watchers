@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { useSelector } from 'react-redux';
-import BreadCrumb from '../../../components/common/BreadCrumb';
-import Footer from '../../../components/common/Footer';
-import Header from '../../../components/Home/Header';
-import TeamDetailsArea from '../../../components/TeamDetails/TeamDetailsArea';
+import BreadCrumb from '../../components/common/BreadCrumb';
+import Footer from '../../components/common/Footer';
+import Header from '../../components/Home/Header';
+import TeamDetailsArea from '../../components/TeamDetails/TeamDetailsArea';
 
 const TeamDetails = () => {
    // teams

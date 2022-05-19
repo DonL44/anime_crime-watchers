@@ -3,7 +3,7 @@ const DATA_CACHE_NAME = "data-cache-v1";
 const FILES_TO_CACHE = [
     "/",
     "/src/homepage.html",
-    "/assets/styles.css",
+    "/public/assets/style/style.css",
     "/public/manifest.json",
     // "/assets/js/db.js",
     "/src/assets/images/Sharingan_Triple.png",

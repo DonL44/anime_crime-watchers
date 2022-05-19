@@ -1,12 +1,12 @@
 import Head from 'next/head';
-import AboutArea from '../../../components/Home/AboutArea';
-import HomeBlog from '../../../components/Home/HomeBlog';
-import Features from '../../../components/Home/Features';
-import Header from '../../../components/Home/Header';
-import HeroArea from '../../../components/Home/HeroArea';
-import HomeCourses from '../../../components/Home/HomeCourses';
-import Cta from '../../../components/Home/Cta';
-import Footer from '../../../components/common/Footer';
+import AboutArea from '../../components/Home/AboutArea';
+// import HomeBlog from '../../components/Home/HomeBlog';
+import Features from '../../components/Home/Features';
+import Header from '../../components/Home/Header';
+import HeroArea from '../../components/Home/HeroArea';
+import HomeCourses from '../../components/Home/HomeCourses';
+import Cta from '../../components/Home/Cta';
+import Footer from '../Footer';
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
       <HomeCourses/>
   
      
-      <HomeBlog/>
+      {/* <HomeBlog/> */}
       <Cta/>
       <Footer/>
     </>
