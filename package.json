@@ -1,0 +1,22 @@
+{
+  "name": "anime_crime-watchers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DonL44/anime_crime-watchers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DonL44/anime_crime-watchers/issues"
+  },
+  "homepage": "https://github.com/DonL44/anime_crime-watchers#readme",
+  "dependencies": {
+    "react": "^18.1.0"
+  }
+}
