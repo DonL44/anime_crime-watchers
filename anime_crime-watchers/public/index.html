@@ -1,229 +1,40 @@
-
 <!DOCTYPE html>
-    <html lang="en" prefix="og: https://ogp.me/ns#">
-    <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d38b9462-4bcd-47b1-956a-a700e2eac5ae" data-blockingmode="auto" type="text/javascript"></script>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="twitter:card" content="summary"/>
+<html lang="en">
 
-    <!--styling links-->
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Rampart+One&display=swap" rel="stylesheet">
-
-    <title>Crime Watchers</title>
-    <meta property="og:title" content="Home" />
-
-
-    <meta name="description" content="Crime Watchers will help you find crime in your city down to the neighborhood. Explore the map or browse by state to find recent crimes near you!" />
-    <meta property="og:description" content="Crime Watchers will help you find crime in your city down to the neighborhood. Explore the map or browse by state to find recent crimes near you!" />
-
-    <meta property="og:site_name" content="Crime Watchers" />
-    <meta property="og:image:secure_url" content="./assets/images/Sharingan_Triple.png" />
-    <meta property="og:image" content="./assets/images/Sharingan_Triple.png" />
-    <meta property="og:image:width" content="600" />
-    <meta property="og:image:height" content="600" />
-    <meta property="twitter:image" content="./assets/images/Sharingan_Triple.png" />
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Google Books search application with login" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
 
 
-
-    <link rel="canonical" href="DEPLOYED SITE WHEN FINISHED GOES HERE" />
-    <meta property="og:url" content="DEPLOYED SITE WHEN FINISHED GOES HERE" />
-    
-    <link rel="stylesheet" href="https://d2gd0no3pm9ozo.cloudfront.net/css/app-ef7a8d7ef698f801b7cab5b88db5e6e7.css?vsn=d"/>
-
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/Sharingan_Triple.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/Sharingan_Triple.png" />
-    <link rel="stylesheet" href="https://a.pub.network/core/pubfig/cls.css">
-    <script data-cfasync="false" type="text/javascript">
-      var freestar = freestar || {};
-      freestar.hitTime = Date.now();
-      freestar.queue = freestar.queue || [];
-      freestar.config = freestar.config || {};
-      freestar.debug = window.location.search.indexOf('fsdebug') === -1 ? false : true;
-      // Tag IDs set here, must match Tags served in the Body for proper setup
-      freestar.config.enabled_slots = [];
-      !function(a,b){var c=b.getElementsByTagName("script")[0],d=b.createElement("script"),e="https://a.pub.network/spotcrime-com";e+=freestar.debug?"/qa/pubfig.min.js":"/pubfig.min.js",d.async=!0,d.src=e,c.parentNode.insertBefore(d,c)}(window,document);
-      freestar.initCallback = function () { (freestar.config.enabled_slots.length === 0) ? freestar.initCallbackCalled = false : freestar.newAdSlots(freestar.config.enabled_slots) }
-    </script>
-
-
+    <title>Hanzai Watchers</title>
   </head>
-
-  <!--Starts the body-->
-  <body data-api-key="SFMyNTY.g2gDbQAAACQ2NTE2M2M0MS1lNDEyLTRiZTQtYjE2ZS1lOTc5MTMwYTVmMGJuBgAyOTukgAFiAAFRgA.MpTEcebGMmUE2hTdm8SCv_FWoadGTCkK9JFA1h8MqjI">
-    <header>
-        <nav>
-          <div class="nav__section">
-              <a class="crimewatch-logo-btn" href="index.html">
-              <img src="./assets/images/minamoto2.png" alt="Crime-watcher logo" class="spotcrime-logo">
-               </a>
-               <h1> Hanzai Watchers</h1>
-              <a class="nav__link desktop-only" href="/map">Map</a>
-              <a class="nav__link desktop-only" href="/browse-by-state">Browse By State</a>
-              </div>
-              <div class="nav__section">
-                <button id="nav-get-alerts-btn" data-alert-limit-hit=false>
-                  Get Alerts
-                </button>
-                <input type="checkbox" id="nav" class="hidden"/>
-                <div class="nav-container">
-                  <ul>
-                    <li>
-                <a class="nav__link mobile-only" href="/map">Map</a>
-                    </li>
-                    <li>
-                      <a class="nav__link" href="/login">Login</a>
-                    </li>
-                    <li>
-                  <a class="nav__link mobile-only" href="/browse-by-state">Browse By State</a>
-                    </li>
-                    
-                    <li>
-                <a class="nav__link" href="https://www.crimetip.us/" rel="noreferrer" target="_blank">
-                    <div class="submit-crime--wrapper">
-                      <span>Submit a Crime Tip</span>
-                      <svg class="external-link-nav" width="17" height="17" xmlns="http://www.w3.org/2000/svg">
-                        <desc>Square with arrow pointing upper right</desc>
-                        <g>
-                          <path d="M3.2 16.525h9c1.65 0 3-1.35 3-3v-5.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v5.5c0 1.1-.9 2-2 2h-9c-1.1 0-2-.9-2-2v-9c0-1.1.9-2 2-2h5.5c.275 0 .5-.225.5-.5s-.225-.5-.5-.5H3.2c-1.65 0-3 1.35-3 3v9c0 1.65 1.35 3 3 3z"/>
-                          <path d="M16.8 5.05V.475v-.1V.35c0-.025 0-.05-.025-.075L16.75.25c0-.025-.025-.05-.025-.05a.424.424 0 00-.15-.15c-.025-.025-.05-.025-.075-.025L16.425 0h-4.7c-.275 0-.5.225-.5.5s.225.5.5.5H15.1L7.775 8.275c-.2.2-.2.5 0 .7.2.2.5.2.7 0l7.325-7.3V5.05c0 .275.225.5.5.5s.5-.225.5-.5z"/>
-                        </g>
-                      </svg>
-                    </div>
-                   </a>
-                </li>
-                  
-              </ul>
-            </div>
-            <label for="nav" class="nav-open mobile-only noSelect"><i></i><i></i><i></i></label>
-          </div>
-        </nav>
-
-<!--DOM content-->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    window.initNavbar()
-  })
-</script>
-
-              <div class="minamoto">
-                  <img class="img-fluid" src="./assets/images/minamoto.png" alt="alternative">
-                               
-              <h1 class="h1-large">こんにちわ. Welcome to our Shogun! </h1>
-              <h1 class="minamoto-p"> I am Minamoto no Yoshitsune, the most powerful Samurai of all times. In Hanzai Watchers you will protect our besto friendos by submiting any crime tip. Remember, keep an eye in the crime alerts. </h1>
-              <button class="find-crime-btn"> Find Crime</button>
-              </div>
-    
-  
-
-</header>
-
-<!--main section-->
-<main role="main" class="container">
-<div class="notification-container"> </div>
-
-<!--hero goes here-->
-<!-- <div class="hero">
-<div class="minamoto">
-  <img src="./assets/images/minamoto.png">
-  <h1 class="text-container"> Welcome to Hanzai Watchers!  </h1>
-</div>
-</div> -->
-<!--section for map-->
-<div class="landing-map">
-  <div class="header__overlay">
-</div>
-<div class="header-wrapper">
-  <h1 class="landing-map-title">Find Crime in Your Neighborhood</h1>
-  <div class="view-or-search-map-container">
-    <div class="view-or-search-map">
-    <a class="view-map" href="/map">View Crime Near Me</a>
-      <p style="margin: 1rem;">or</p>
-        <form id="landing-page__address-search" class="search-container" role="search">
-          <input id="pac-input" class="places-search" type="text" placeholder="Search for Address (Street, City, State)" aria-label="Search for Address (Street, City, State)">
-          <button class="search-button" type="submit" aria-label="Click to search for an address on the map">
-            <img src="https://d2gd0no3pm9ozo.cloudfront.net/images/search-01d040380b715c7bf35ce04cd2e94943.svg?vsn=d" alt="Search" class="search-icon">
-          </button>
-        <form>
-    </div>
-  </div>
-
-
-  <div class="learn_more--wrapper">
-    <a class ="link-text" href="#what-is-crime-watch">
-      <div class="learn-more">
-        <span class="learn_more--text">Learn More</span>
-        <img class="learn_more--down-arrow" src="https://d2gd0no3pm9ozo.cloudfront.net/images/chevron-thin-down-7112962821113542692e387dbc7d2571.svg?vsn=d" alt="Map + Alert" class="learn-more-arrow">
-      </div>
-    </a>
-  </div>
-</div>
-</div>
-
-
-
-<!--about us section-->
-<div class="spotcrime-info">
-  <div id="what-is-crime-watch" class="what-is-spotcrime">
-    <h2 class="section-title">What is Crime Watchers?</h2>
-    <img src="https://d2gd0no3pm9ozo.cloudfront.net/images/map-alert-b5c152572af6af8bac8630da63df6c33.svg?vsn=d" alt="Map + Alert" class="section-icon">
-    <span class="text-block">Crime Watchers is a public facing crime map and crime alert service. With Crime Watchers, it’s easier than ever to check crime anywhere in the United States and many other countries worldwide.</span>
-    <span class="text-block">Our goal is to provide the most accurate and timely crime information to the public.</span>
-    <span class="text-block">As the most visited crime mapping website, Crime Watchers allows you to easily look up city and county crime data and reports -- all the way down to local neighborhood statistics.</span>
-  </div>
-  <div class="personalized-alerts">
-    <h2 class="section-title">Personalized Alerts</h2>
-    <img src="https://d2gd0no3pm9ozo.cloudfront.net/images/profile-4e1e94efef5353bb676248d920885f00.svg?vsn=d" alt="personalized-alerts" class="section-icon">
-    <span class="text-block">Stay up to date on crimes in your area by choosing between daily or weekly updates via email.</span>
-    <span class="text-block">Stay aware, stay safe.</span>
-    <button id="get-alerts-btn" data-alert-limit-hit=false>Get Alerts</button>
-    <span class="text-block unsubscribe-text">Unsubscribe at any time</span>
-  </div>
-</div>
-
-
-<!--footer section-->
-<footer class="footer-section">
-    <div class="logo-section">
-      <img src="./assets/images/Sharingan_Triple.png" alt="Crime-Watch Logo Small" class="footer-logo">
-    </div>
-    <div class="link-section">
-      <div class="column">
-        <h4>
-          <a class="footer-link" href="https://www.crimetip.us/" rel="noreferrer" target="_blank">Submit a Crime Tip</a>
-     </h4>
-        <h4>
-             <a class="footer-link" href="/about">About Us</a>
-        </h4>
-        
-        <h4>
-              <a class="footer-link" href="/contact">Contact Us</a>
-        </h4>
-        <h4>
-              <a class="footer-link" href="DEPLOYED SITE WHEN FINISHED GOES HERE" rel="noreferrer" target="_blank">Blog</a>
-        </h4>
-      </div>
-        <div class="socials-column">
-               <a class="footer-social-link" href="https://www.facebook.com/" rel="noreferrer" target="_blank">
-            <img src="https://d2gd0no3pm9ozo.cloudfront.net/images/facebook-35c2364e37c7708f32486bc021fe30aa.svg?vsn=d" alt="Facebook">
-           </a>
-               <a class="footer-social-link" href="https://twitter.com/" rel="noreferrer" target="_blank">
-            <img src="https://d2gd0no3pm9ozo.cloudfront.net/images/twitter-99b2e57cdee96471d52081884b587b42.svg?vsn=d" alt="Twitter">
-             </a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-    <script type="text/javascript" src="https://d2gd0no3pm9ozo.cloudfront.net/js/landingPage-17ef99d82a6677497e5ae31275ee1349.js?vsn=d"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDv6bOs9TF-_ThwAnCP1pUQKbHZ8V2P3A&libraries=places&callback=initLandingPage" async defer></script>
-
-    </main>
-    <script type="module" src="https://d2gd0no3pm9ozo.cloudfront.net/js/app-a1717cc168674772957fdd1532f1fdd2.js?vsn=d"></script>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
   </body>
 </html>

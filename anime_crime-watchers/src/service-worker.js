@@ -2,12 +2,12 @@ const CACHE_NAME = "static-cache-v1";
 const DATA_CACHE_NAME = "data-cache-v1";
 const FILES_TO_CACHE = [
     "/",
-    "/index.html",
+    "/src/homepage.html",
     "/assets/styles.css",
-    "/assets/js/index.js",
-    "/assets/js/db.js",
-    "/assets/images/Sharingan_Triple.png",
-    "/manifest.json",
+    "/public/manifest.json",
+    // "/assets/js/db.js",
+    "/src/assets/images/Sharingan_Triple.png",
+    // "/src/",
   ];
   
   self.addEventListener('install', function(evt) {
