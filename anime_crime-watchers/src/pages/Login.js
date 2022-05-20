@@ -54,7 +54,8 @@ const Login = () => {
   
 
   return (
-    <>
+    <div className='text-white'>
+      <div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'></div>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
           dismissible
@@ -101,7 +102,7 @@ const Login = () => {
           Submit
         </Button>
       </Form>
-    </>
+    </div>
   );
 };
 
