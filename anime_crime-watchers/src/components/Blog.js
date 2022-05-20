@@ -17,7 +17,7 @@ const Blog = () => {
               type='email'
               placeholder='Enter Email'
             />
-            <button className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3'>
+            <button className='bg-[#dfc100] text-black rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3'>
               Notify Me
             </button>
           </div>
