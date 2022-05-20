@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import SearchCrimes from "./pages/SearchCrimes";
 // import SavedSamurais from "./pages/SavedSamurais";
 import Navbar from "./components/Navbar";
+import Homepage from './pages/homepage'
 import About from './pages/aboutus';
 // import Gallery from './components/Gallery';
 // import ContactForm from './components/Contact';
@@ -50,7 +51,7 @@ function App() {
           <Switch>
             {/* <Route exact path="/" component={SearchCrimes} />
             <Route exact path="/saved" component={SavedSamurais} /> */}
-            <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
+            <Route exact path="/" component={Homepage} />
           </Switch>
         </>
         <>
