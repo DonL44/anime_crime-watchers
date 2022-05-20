@@ -42,3 +42,4 @@ Use `npm run watch` to start the continuous `webpack` processes and a webserver.
 ### Running tests
 
 You can lint the code with `npm run lint` and run tests with `npm run test`.
+![RunTest](anime_crime-watchers/src/assets/images/backdrop.gif)
