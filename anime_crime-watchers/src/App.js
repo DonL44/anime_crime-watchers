@@ -1,17 +1,18 @@
 import React from 'react';
 import Analytics from './components/Analytics';
 import Cards from './components/Cards';
-import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
-import Blog from './components/Blog';
+import Blog from './pages/Blog';
 import Home from './pages/Home';
-import Contact from './pages/Contact';
-import Dashboard from './pages/Dashboard';
-import Sign from './components/Sign';
-import Login from './components/Sign';
+import Contact from './components/Contact';
+import Dashboard from './components/Dashboard';
+import Sign from './pages/Sign';
+import Login from './pages/Sign';
 import About from './pages/About';
 import Error from './pages/Error';
+
+import Footer from './components/Footer';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
@@ -46,9 +47,9 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
-          
-          <div className="container">
-            <Routes>
+          <Navbar />
+          <Hero />
+          <Routes>
               <Route 
                 path="/" 
                 element={<Home />} 
@@ -57,35 +58,17 @@ function App() {
                 path="/Sign" 
                 element={<Sign />} 
               />
-              <Route 
-                path="/Analytics" 
-                element={<Analytics />} 
-              />
-              <Route 
-                path="/Hero" 
-                element={<Hero />} 
-              />
               
               <Route 
-                path="/Blog/:id" 
+                path="/Blog" 
                 element={<Blog />} 
               />
-               <Route 
-                path="/Cards" 
-                element={<Cards />} 
-              />
-              <Route 
-                path="/Navbar" 
-                element={<Navbar />} 
-              />
+               
               <Route 
                 path="/Contact" 
                 element={<Contact />} 
               />
-              <Route 
-                path="/Dashboard" 
-                element={<Dashboard />} 
-              />
+            
               <Route 
                 path="/Login" 
                 element={<Login />} 
@@ -98,8 +81,10 @@ function App() {
                 path="*" 
                 element={<Error />} 
               />
-            </Routes>
-          </div>
+        </Routes>
+          
+           
+         
           <Footer />
         </div>
       </Router>
