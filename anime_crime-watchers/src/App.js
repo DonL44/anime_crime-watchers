@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import { useState } from 'react';
 import Home from './pages/Home';
 import About from './pages/About';
-import Blog from './pages/Blog';
+import Blog from './pages/blog';
 import Error from './pages/Error';
 import SharedLayout from './pages/SharedLayout';
 import SingleBlog from './pages/SinglePost';
@@ -16,6 +16,7 @@ import Sign from './components/Sign';
 import ProtectedRoute from './pages/ProtectedRoute';
 import SharedBlogLayout from './pages/SharedBlogLayout';
 import Contact from './pages/Contact';
+// import './assets/style/style-homepage.css'
 
 import {
   ApolloProvider,
@@ -88,6 +89,7 @@ function App() {
                       }
                     />
           <Route path='*' element={<Error />} />
+          
         </Route>
           </Routes>
         </>
