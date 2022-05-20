@@ -1,7 +1,7 @@
 const Home = () => {
     return (
-      <section className='section'>
-        <h2>home page</h2>
+      <section className='sectionn text-white'>
+        <h1>home page</h1>
       </section>
       
     );
