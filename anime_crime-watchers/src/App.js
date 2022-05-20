@@ -1,105 +1,110 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import SearchBooks from "./pages/SearchBooks";
-// import SavedBooks from "./pages/SavedBooks";
-import Navbar from "./components/Navbar";
-import { useState } from 'react';
+import React from 'react';
+import Analytics from './components/Analytics';
+import Cards from './components/Cards';
+import Footer from './components/Footer';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
+import Blog from './components/Blog';
 import Home from './pages/Home';
-import About from './pages/About';
-import Blog from './pages/blog';
-import Error from './pages/Error';
-import SharedLayout from './pages/SharedLayout';
-import SingleBlog from './pages/SinglePost';
-import Dashboard from './pages/Dashboard';
-import Login from './components/Login';
-import Sign from './components/Sign';
-import ProtectedRoute from './pages/ProtectedRoute';
-import SharedBlogLayout from './pages/SharedBlogLayout';
 import Contact from './pages/Contact';
-import Footer from "./components/Footer";
-// import './assets/style/style-homepage.css'
+import Dashboard from './pages/Dashboard';
+import Sign from './components/Sign';
+import Login from './components/Sign';
+import About from './pages/About';
+import Error from './pages/Error';
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
-  ApolloProvider,
   ApolloClient,
   InMemoryCache,
+  ApolloProvider,
   createHttpLink,
-} from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
-// Link to the GraphQL server on the backend
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: '/graphql',
 });
-// "Middleware" function to retrieve token and combine it with the existing httpLink
-// We do not need the first parameter offered by setContext. Because of that, "_" is used as a placeholder to get to the second.
+
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem("id_token");
+  const token = localStorage.getItem('id_token');
   return {
-    /* ensures the return headers of every request includes the token */
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : "",
+      authorization: token ? `Bearer ${token}` : '',
     },
   };
 });
-// Instantiate the Apollo Client instance to connect to the API endpoint
+
 const client = new ApolloClient({
-  // Combining authLink with httpLink
   link: authLink.concat(httpLink),
-  // Instantiate a new cache object
   cache: new InMemoryCache(),
 });
 
 function App() {
-  const [user, setUser] = useState(null);
   return (
-    // Enable entire app to interact with the Apollo Client instance
     <ApolloProvider client={client}>
       <Router>
-        <>
-          <Navbar />
-          <Routes>
-          <Route path='/' element={<SharedLayout />}>
-          <Route index element={<Home />} />
-          <Route path='About' element={<About />} />
-          <Route path='Contact' element={<Contact />} />
-
-          <Route path='Blog' element={<SharedBlogLayout />}>
-          <Route index element={<Blog />} />
-          <Route path=':blogId' element={<SingleBlog />} />
-          </Route>
-
-          <Route path='Login' element={<Login setUser={setUser}></Login>} />
-          <Route
-            path='Dashboard'
-            element={
-              <ProtectedRoute user={user}>
-                <Dashboard user={user} />
-              </ProtectedRoute>
-            }
-          />
-
-          <Route path='Sign' element={<Sign setUser={setUser}></Sign>} />
-                    <Route
-                      path='Dashboard'
-                      element={
-                        <ProtectedRoute user={user}>
-                          <Dashboard user={user} />
-                        </ProtectedRoute>
-                      }
-                    />
-          <Route path='*' element={<Error />} />
+        <div className="flex-column justify-flex-start min-100-vh">
           
-        </Route>
-          </Routes>
-        </>
+          <div className="container">
+            <Routes>
+              <Route 
+                path="/" 
+                element={<Home />} 
+              />
+              <Route 
+                path="/Sign" 
+                element={<Sign />} 
+              />
+              <Route 
+                path="/Analytics" 
+                element={<Analytics />} 
+              />
+              <Route 
+                path="/Hero" 
+                element={<Hero />} 
+              />
+              
+              <Route 
+                path="/Blog/:id" 
+                element={<Blog />} 
+              />
+               <Route 
+                path="/Cards" 
+                element={<Cards />} 
+              />
+              <Route 
+                path="/Navbar" 
+                element={<Navbar />} 
+              />
+              <Route 
+                path="/Contact" 
+                element={<Contact />} 
+              />
+              <Route 
+                path="/Dashboard" 
+                element={<Dashboard />} 
+              />
+              <Route 
+                path="/Login" 
+                element={<Login />} 
+              />
+              <Route 
+                path="/About" 
+                element={<About />} 
+              />
+              <Route 
+                path="*" 
+                element={<Error />} 
+              />
+            </Routes>
+          </div>
+          <Footer />
+        </div>
       </Router>
     </ApolloProvider>
   );
 }
-
-
-
 
 export default App;

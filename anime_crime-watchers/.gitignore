@@ -25,3 +25,4 @@ yarn-debug.log*
 yarn-error.log*
 
 scss
+process.env.REACT_APP_GOOGLE_MAPS_API_KEY = AIzaSyDxOKhtBNKACsGxWZm_gwP88yQPHIaxGYw

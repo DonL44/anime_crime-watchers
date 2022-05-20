@@ -1,134 +1,40 @@
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+// import About from '../pages/About';
 const Navbar = () => {
+  const [nav, setNav] = useState(false);
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
   return (
-    <nav className='navbar'>
-      <NavLink
-        to='/'
-        className={({ isActive }) => (isActive ? 'link active' : 'link')}
-      >
-        Hanzai Watchers
-      </NavLink>
-      <NavLink
-        to='/About'
-        className={({ isActive }) => (isActive ? 'link active' : 'link')}
-      >
-        About
-      </NavLink>
-      <NavLink
-        to='/Login'
-        className={({ isActive }) => (isActive ? 'link active' : 'link')}
-      >
-        Login
-      </NavLink>
-      <NavLink
-        to='/Sign'
-        className={({ isActive }) => (isActive ? 'link active' : 'link')}
-      >
-        Sign Up
-      </NavLink>
-      <NavLink
-        to='/Blog'
-        className={({ isActive }) => (isActive ? 'link active' : 'link')}
-      >
-        Blog
-      </NavLink>
-      {/* <NavLink
-        to='/Products'
-        className={({ isActive }) => (isActive ? 'link active' : 'link')}
-      >
-        Products
-      </NavLink> */}
-      <NavLink
-        to='/Contact'
-        className={({ isActive }) => (isActive ? 'link active' : 'link')}
-      >
-        Contact Us
-      </NavLink>
-      <NavLink
-      as = "a" href="https://www.crimetip.us" target="_blank"
-        // to={{pathname = "https://www.crimetip.us"}}
-        className={({ isActive }) => (isActive ? 'link active' : 'link')}
-      >
-       Submit a Crime Tip
-      </NavLink>
-    </nav>
+    <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
+      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Hanzai Watchers</h1>
+      {/* <ul className='hidden md:flex'> */}
+        <NavLink to ='/' > <li className='p-4'>Home</li> </NavLink>
+        <NavLink to ='/About'> <li className='p-4'>About </li> </NavLink>
+        <NavLink to ='/Blog'><li className='p-4'>Blog</li> </NavLink>
+        <NavLink to ='Login'> <li className='p-4'>Login</li> </NavLink>
+        <NavLink to ='/Contact'> <li className='p-4'>Contact</li> </NavLink>
+      {/* </ul> */}
+      <div onClick={handleNav} className='block md:hidden'>
+          {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
+      </div>
+      <ul className={nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'ease-in-out duration-500 fixed left-[-100%]'}>
+        <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>Hanzai Watchers</h1>
+          <li className='p-4 border-b border-gray-600'>Home</li>
+          <li className='p-4 border-b border-gray-600'>About</li>
+          <li className='p-4 border-b border-gray-600'>Blog</li>
+          <li className='p-4 border-b border-gray-600'>Login</li>
+          <li className='p-4'>Contact</li>
+      </ul>
+    </div>
   );
 };
+
 export default Navbar;
-
-// import React, { useState } from 'react';
-
-// import Auth from '../utils/auth';
-
-// const AppNavbar = () => {
-
-//   const [showModal, setShowModal] = useState(false);
-
-//   return (
-//     <>
-//       <Navbar bg='dark' variant='dark' expand='lg'>
-//         <Container fluid>
-//           <Navbar.Brand as={Link} to='/'>
-//             Hanzai Watchers
-//           </Navbar.Brand>
-//           <Navbar.Toggle aria-controls='navbar' />
-//           <Navbar.Collapse id='navbar'>
-//             <Nav className='ml-auto'>
-//               <Nav.Link as={Link} to='/'>
-//                 Submit a Crime Tip
-//               </Nav.Link>
-      
-//               {Auth.loggedIn() ? (
-//                 <>
-//                   <Nav.Link as={Link} to='/saved'>
-//                     See Your Samurai
-//                   </Nav.Link>
-//                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
-//                 </>
-//               ) : (
-//                 <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
-//               )}
-//             </Nav>
-//           </Navbar.Collapse>
-//         </Container>
-//       </Navbar>
- 
-//       <Modal
-//         size='lg'
-//         show={showModal}
-//         onHide={() => setShowModal(false)}
-//         aria-labelledby='signup-modal'>
-    
-//         <Tab.Container defaultActiveKey='login'>
-//           <Modal.Header closeButton>
-//             <Modal.Title id='signup-modal'>
-//               <Nav variant='pills'>
-//                 <Nav.Item>
-//                   <Nav.Link eventKey='login'>Login</Nav.Link>
-//                 </Nav.Item>
-//                 <Nav.Item>
-//                   <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
-//                 </Nav.Item>
-//               </Nav>
-//             </Modal.Title>
-//           </Modal.Header>
-//           <Modal.Body>
-//             <Tab.Content>
-//               <Tab.Pane eventKey='login'>
-//                 <LoginForm handleModalClose={() => setShowModal(false)} />
-//               </Tab.Pane>
-//               <Tab.Pane eventKey='signup'>
-//                 <SignUpForm handleModalClose={() => setShowModal(false)} />
-//               </Tab.Pane>
-//             </Tab.Content>
-//           </Modal.Body>
-//         </Tab.Container>
-//       </Modal>
-//     </>
-//   );
-// };
-
-// export default AppNavbar;
 
 // import { Link } from 'react-router-dom';
 
