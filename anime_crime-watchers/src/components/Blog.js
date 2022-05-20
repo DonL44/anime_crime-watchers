@@ -9,6 +9,7 @@ const Blog = () => {
             Want tips & tricks to beat Minamoto no Yoshitsune?
           </h1>
           <p>Sign up to our newsletter and stay up to date.</p>
+         
         </div>
         <div className='my-4'>
           <div className='flex flex-col sm:flex-row items-center justify-between w-full'>
