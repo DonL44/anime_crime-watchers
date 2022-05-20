@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 // import Typed from 'react-typed';
 
 const Hero = () => {
@@ -24,7 +25,7 @@ const Hero = () => {
           /> */}
         </div>
         <p className='md:text-2xl text-xl font-bold text-gray-500'>Help our societies to be safer than ever. The more crime tips reported, the more points, and with that you can gain a Samurai Title.</p>
-        <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Get Started</button>
+        <NavLink className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black' to = '/login'>Get Started</NavLink>
         {/* Add connection to sign in */}
       </div>
     </div>
