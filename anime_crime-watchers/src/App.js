@@ -16,6 +16,7 @@ import Sign from './components/Sign';
 import ProtectedRoute from './pages/ProtectedRoute';
 import SharedBlogLayout from './pages/SharedBlogLayout';
 import Contact from './pages/Contact';
+import Footer from "./components/Footer";
 // import './assets/style/style-homepage.css'
 
 import {
@@ -97,5 +98,8 @@ function App() {
     </ApolloProvider>
   );
 }
+
+
+
 
 export default App;
