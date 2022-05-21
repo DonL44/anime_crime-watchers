@@ -12,6 +12,7 @@ import Login from './pages/Sign';
 import About from './pages/About';
 import Error from './pages/Error';
 
+import '../src/index.css';
 import Footer from './components/Footer';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

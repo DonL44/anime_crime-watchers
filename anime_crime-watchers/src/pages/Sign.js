@@ -6,7 +6,7 @@ import Auth from "../utils/auth";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 
-const SignupForm = () => {
+const Sign = () => {
  
   const [userFormData, setUserFormData] = useState({
     username: "",
@@ -49,8 +49,9 @@ const SignupForm = () => {
       password: "",
     });
   };
+
   return (
-    <div className="flex-row justify-center mb-4 text-white">
+    <>
     
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
     
@@ -121,9 +122,8 @@ const SignupForm = () => {
           Submit
         </Button>
       </Form>
-    </div>
+    </>
   );
 };
 
-
-export default SignupForm;
+export default Sign;
