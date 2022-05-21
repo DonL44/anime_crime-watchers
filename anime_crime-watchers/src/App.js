@@ -1,6 +1,6 @@
 import React from "react";
 // import React, { Component } from "react";
-// import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react=router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Analytics from './components/Analytics';
 import Cards from './components/Cards';
 import Footer from './components/Footer';
@@ -18,7 +18,9 @@ import "./App.css";
 function App() {
   return (
     <div>
+     <Router>
       <Navbar />
+      </Router>
       <Hero />
       <Analytics />
       <Blog />
