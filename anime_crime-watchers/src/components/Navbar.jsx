@@ -3,6 +3,9 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import Logo from '../assets/images/Sharingan_Triple.png'
+import Backdrop from '../assets/images/backdrop.gif'
+import Banner from '../assets/images/hanzai_watchers.gif'
+import Samurai from '../assets/images/minamoto.png'
 
 const navigation = [
   { name: 'Dashboard', href: '#' },
@@ -182,8 +185,8 @@ export default function Example() {
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/cloud-illustration-indigo-400.svg"
-                    alt=""
+                    src={Samurai}
+                    alt="/"
                   />
                 </div>
               </div>
