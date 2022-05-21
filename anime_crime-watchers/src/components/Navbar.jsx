@@ -13,9 +13,9 @@ import Logo from '../assets/images/Sharingan_Triple.png'
 
 const navigation = [
   { name: 'Dashboard', href: '#' },
-  { name: 'About', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Contact Us', href: '#' },
+  { name: 'About', href: '#about' },
+  { name: 'Resources', href: '#resources' },
+  { name: 'Contact Us', href: '#contact' },
 ]
 
 export default function Example() {
@@ -53,7 +53,7 @@ export default function Example() {
               </div>
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
-              <a href="#" className="text-base font-medium text-white hover:text-gray-300">
+              <a href="#blog" className="text-base font-medium text-white hover:text-gray-300">
                 Blog
               </a>
               <a
