@@ -7,7 +7,7 @@ const people = [
       role: 'Front-End',
       imageUrl:
         'https://avatars.githubusercontent.com/u/92898110?v=4',
-      twitterUrl: '#',
+      twitterUrl: 'https://github.com/tanyaleepr',
       linkedinUrl: 'https://www.linkedin.com/in/tanyagonzalez/',
     },
 
@@ -16,7 +16,7 @@ const people = [
         role: 'Front-End',
         imageUrl:
           'https://media-exp1.licdn.com/dms/image/C5603AQHlZdd9x7Q4rQ/profile-displayphoto-shrink_800_800/0/1652917802132?e=1658361600&v=beta&t=fCpe_bsJlCq4xzcdNnvXjNU2V6zm-04ir3W-KPp57P0',
-        twitterUrl: '#',
+        twitterUrl: 'https://github.com/DonL44',
         linkedinUrl: 'https://www.linkedin.com/in/donovan-looney-190941233/',
       },
 
@@ -25,7 +25,7 @@ const people = [
         role: 'Back-End',
         imageUrl:
           'https://avatars.githubusercontent.com/u/95392451?v=4',
-        twitterUrl: '#',
+        twitterUrl: 'https://github.com/ashleyhodge',
         linkedinUrl: 'https://www.linkedin.com/in/ashley-hodge-227285138/',
       },
 
@@ -34,7 +34,7 @@ const people = [
         role: 'Back-End',
         imageUrl:
           'https://avatars.githubusercontent.com/u/95047881?v=4',
-        twitterUrl: '#',
+        twitterUrl: 'https://github.com/pshertzi',
         linkedinUrl: 'https://www.linkedin.com/in/paul-shertzinger-5a9869b3/',
       },
     // More people...
