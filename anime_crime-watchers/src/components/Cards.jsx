@@ -5,8 +5,8 @@ import React from 'react';
 
 const Cards = () => {
   return (
-    <div className='w-full py-[10rem] px-4 bg-white'>
-      <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
+    <div className='bg-white px-4 py-5 border-b border-gray-200 sm:px-6'>
+      <div className='ml-4 -mt-4 flex justify-between items-center flex-wrap sm:flex-nowrap'>
           <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
               {/* <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Single} alt="/" /> */}
               <h2 className='text-2xl font-bold text-center py-8'>Tanya Gonzalez</h2>
