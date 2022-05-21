@@ -1,190 +1,198 @@
 import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-import { PlusSmIcon } from '@heroicons/react/solid'
+import { Popover, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { ChevronRightIcon } from '@heroicons/react/solid'
 import Logo from '../assets/images/Sharingan_Triple.png'
-// import Backdrop from '../assets/images/backdrop.gif'
-// import Banner from '../assets/images/hanzai_watchers.gif'
 
-const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-}
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'About', href: '#', current: false },
-  { name: 'Blog', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
+  { name: 'Dashboard', href: '#' },
+  { name: 'About', href: '#' },
+  { name: 'Marketplace', href: '#' },
+  { name: 'Contact Us', href: '#' },
 ]
-const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
-      {({ open }) => (
-        <>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16">
-              <div className="flex">
-                <div className="-ml-2 mr-2 flex items-center md:hidden">
-                  {/* Mobile menu button */}
-                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <XIcon className="block h-6 w-6" aria-hidden="true" />
-                    ) : (
-                      <MenuIcon className="block h-6 w-6" aria-hidden="true" />
-                    )}
-                  </Disclosure.Button>
-                </div>
-                <div className="flex-shrink-0 flex items-center">
+    <div className="relative overflow-hidden">
+      <Popover as="header" className="relative">
+        <div className="bg-gray-900 pt-6">
+          <nav
+            className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
+            aria-label="Global"
+          >
+            <div className="flex items-center flex-1">
+              <div className="flex items-center justify-between w-full md:w-auto">
+                <a href="#">
+                  <span className="sr-only">Hanzai Watchers</span>
                   <img
-                    className="block lg:hidden h-8 w-auto"
+                    className="h-8 w-auto sm:h-10"
                     src={Logo}
                     alt="Logo"
                   />
+                </a>
+                <div className="-mr-2 flex items-center md:hidden">
+                  <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                    <span className="sr-only">Open main menu</span>
+                    <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                  </Popover.Button>
+                </div>
+              </div>
+              <div className="hidden space-x-8 md:flex md:ml-10">
+                {navigation.map((item) => (
+                  <a key={item.name} href={item.href} className="text-base font-medium text-white hover:text-gray-300">
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="hidden md:flex md:items-center md:space-x-6">
+              <a href="#" className="text-base font-medium text-white hover:text-gray-300">
+                Blog
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
+              >
+                Sign Up / Login in
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <Transition
+          as={Fragment}
+          enter="duration-150 ease-out"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="duration-100 ease-in"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
+            <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div className="px-5 pt-4 flex items-center justify-between">
+                <div>
                   <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
-                    alt="Workflow"
+                    className="h-8 w-auto"
+                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                    alt=""
                   />
                 </div>
-                <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
+                <div className="-mr-2">
+                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+                    <span className="sr-only">Close menu</span>
+                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                  </Popover.Button>
+                </div>
+              </div>
+              <div className="pt-5 pb-6">
+                <div className="px-2 space-y-1">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                        'px-3 py-2 rounded-md text-sm font-medium'
-                      )}
-                      aria-current={item.current ? 'page' : undefined}
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
                     </a>
                   ))}
                 </div>
-              </div>
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <button
-                    type="button"
-                    className="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#dfc100] hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
+                <div className="mt-6 px-5">
+                  <a
+                    href="#"
+                    className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700"
                   >
-                    <PlusSmIcon className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
-                    <span>Sign Up</span>
-                  </button>
+                    Start free trial
+                  </a>
                 </div>
-                <div className="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
-                  <button
-                    type="button"
-                    className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                  >
-                    <span className="sr-only">View notifications</span>
-                    <BellIcon className="h-6 w-6" aria-hidden="true" />
-                  </button>
+                <div className="mt-6 px-5">
+                  <p className="text-center text-base font-medium text-gray-500">
+                    Existing customer?{' '}
+                    <a href="#" className="text-gray-900 hover:underline">
+                      Login
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Popover.Panel>
+        </Transition>
+      </Popover>
 
-                  {/* Profile dropdown */}
-                  <Menu as="div" className="ml-3 relative">
-                    <div>
-                      <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                        <span className="sr-only">Open user menu</span>
-                        <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
-                      </Menu.Button>
-                    </div>
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-200"
-                      enterFrom="transform opacity-0 scale-95"
-                      enterTo="transform opacity-100 scale-100"
-                      leave="transition ease-in duration-75"
-                      leaveFrom="transform opacity-100 scale-100"
-                      leaveTo="transform opacity-0 scale-95"
-                    >
-                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        {userNavigation.map((item) => (
-                          <Menu.Item key={item.name}>
-                            {({ active }) => (
-                              <a
-                                href={item.href}
-                                className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block px-4 py-2 text-sm text-gray-700'
-                                )}
-                              >
-                                {item.name}
-                              </a>
-                            )}
-                          </Menu.Item>
-                        ))}
-                      </Menu.Items>
-                    </Transition>
-                  </Menu>
+      <main>
+        <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+          <div className="mx-auto max-w-7xl lg:px-8">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+                <div className="lg:py-24">
+                  <a
+                    href="#"
+                    className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
+                  >
+                    <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
+                      Search Crime
+                    </span>
+                    <span className="ml-4 text-sm">In Your Neighborhood</span>
+                    <ChevronRightIcon className="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
+                  </a>
+                  <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                    <span className="block">Report crimes and get points to</span>
+                    <span className="block text-indigo-400">beat Minamoto no Yoshitsune.</span>
+                  </h1>
+                  <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                  Help our societies to be safer than ever. The more crime tips reported, the more points, and with that you can gain a Samurai Title.
+                  </p>
+                  <div className="mt-10 sm:mt-12">
+                    <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
+                      <div className="sm:flex">
+                        <div className="min-w-0 flex-1">
+                          <label htmlFor="email" className="sr-only">
+                            Email address
+                          </label>
+                          <input
+                            id="email"
+                            type="email"
+                            placeholder="Enter your email"
+                            className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
+                          />
+                        </div>
+                        <div className="mt-3 sm:mt-0 sm:ml-3">
+                          <button
+                            type="submit"
+                            className="block w-full py-3 px-4 rounded-md shadow bg-indigo-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
+                          >
+                            Start free trial
+                          </button>
+                        </div>
+                      </div>
+                      <p className="mt-3 text-sm text-gray-300 sm:mt-4">
+                        Start your free 14-day trial, no credit card necessary. By providing your email, you agree to
+                        our{' '}
+                        <a href="#" className="font-medium text-white">
+                          terms of service
+                        </a>
+                        .
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
+                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                  {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
+                  <img
+                    className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                    src="https://tailwindui.com/img/component-images/cloud-illustration-indigo-400.svg"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <Disclosure.Panel className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-            <div className="pt-4 pb-3 border-t border-gray-700">
-              <div className="flex items-center px-5 sm:px-6">
-                <div className="flex-shrink-0">
-                  <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
-                </div>
-                <div className="ml-3">
-                  <div className="text-base font-medium text-white">{user.name}</div>
-                  <div className="text-sm font-medium text-gray-400">{user.email}</div>
-                </div>
-                <button
-                  type="button"
-                  className="ml-auto flex-shrink-0 bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
-              </div>
-              <div className="mt-3 px-2 space-y-1 sm:px-3">
-                {userNavigation.map((item) => (
-                  <Disclosure.Button
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                  >
-                    {item.name}
-                  </Disclosure.Button>
-                ))}
-              </div>
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+        {/* More main page content here... */}
+      </main>
+    </div>
   )
 }
