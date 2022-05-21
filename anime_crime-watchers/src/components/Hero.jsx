@@ -1,6 +1,7 @@
 import React from 'react';
 // import Typed from 'react-typed';
-
+// import Backdrop from '../assets/images/backdrop.gif'
+// import Banner from '../assets/images/hanzai_watchers.gif'
 const Hero = () => {
   return (
     <div className='text-white'>
@@ -26,6 +27,7 @@ const Hero = () => {
         <p className='md:text-2xl text-xl font-bold text-gray-500'>Help our societies to be safer than ever. The more crime tips reported, the more points, and with that you can gain a Samurai Title.</p>
         <button className='bg-[#dfc100] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Get Started</button>
         {/* Add connection to sign in */}
+        {/* <img src={Backdrop} alt="Backdrop"/> */}
       </div>
     </div>
   );
