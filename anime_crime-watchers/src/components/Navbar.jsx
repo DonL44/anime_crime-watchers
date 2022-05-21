@@ -1,8 +1,15 @@
 import { Fragment } from 'react'
+import { NavLink } from 'react-router-dom';
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import Logo from '../assets/images/Sharingan_Triple.png'
+// import Contact from './components/Contact';
+// import Dashboard from './components/Dashboard';
+// import Sign from './pages/Sign';
+// import Login from './pages/Sign';
+// import About from './pages/About';
+// import Error from './pages/Error';
 
 const navigation = [
   { name: 'Dashboard', href: '#' },
