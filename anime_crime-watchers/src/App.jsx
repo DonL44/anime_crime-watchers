@@ -31,14 +31,12 @@ function App() {
           </Routes>
         </main>
         <div>
-          
           <Main />
           <Hero />
           <Analytics />
           <Blog />
           <Group />
         </div>
-        
       </Router>
       <Footer />
     </div>
