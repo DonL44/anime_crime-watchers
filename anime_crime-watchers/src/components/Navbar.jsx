@@ -13,23 +13,15 @@ import Logo from '../assets/images/Sharingan_Triple.png'
 
 function Navbar () {
 
-  return (
-    <nav className="navbar">
-    <Link to="../pages/Sign-in.jsx">Sign Up</Link>
-    </nav>
-  )
-}
+  const navigation = [
+    { name: 'Dashboard', href: '#' },
+    { name: 'About', href: '#about' },
+    { name: 'Resources', href: '#resources' },
+    { name: 'Contact Us', href: '#contact' },
+  ]
 
-const navigation = [
-  { name: 'Dashboard', href: '#' },
-  { name: 'About', href: '#about' },
-  { name: 'Resources', href: '#resources' },
-  { name: 'Contact Us', href: '#contact' },
-]
-
-export default function Example() {
   return (
-      <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden">
       <Popover as="header" className="relative">
         <div className="bg-gray-900 pt-6">
           <nav
@@ -66,7 +58,7 @@ export default function Example() {
                 Blog
               </a>
               <a
-                href="#signup"
+
                 className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">             
                 Sign Up / Login in
               </a>
@@ -211,3 +203,7 @@ export default function Example() {
     </div>
   )
 }
+
+export default Navbar;
+
+
