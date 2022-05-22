@@ -61,7 +61,7 @@ const people = [
                     <div className="space-y-2 xl:flex xl:items-center xl:justify-between">
                       <div className="font-medium text-lg leading-6 space-y-1">
                         <h3 className="text-white">{person.name}</h3>
-                        <p className="text-[#dfc100]">{person.role}</p>
+                        <p className="text-indigo-600">{person.role}</p>
                       </div>
   
                       <ul role="list" className="flex justify-center space-x-5">

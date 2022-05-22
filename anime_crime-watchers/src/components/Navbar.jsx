@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
@@ -14,7 +14,9 @@ import Logo from '../assets/images/Sharingan_Triple.png'
 function Navbar () {
 
   return (
-    <Link to="../pages/Sign-in.jsx"></Link>
+    <nav className="navbar">
+    <Link to="../pages/Sign-in.jsx">Sign Up</Link>
+    </nav>
   )
 }
 

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className='text-white'>
       <div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
-        <p className='text-[#dfc100] font-bold p-2 text-3xl'>
+        <p className='text-indigo-600 font-bold p-2 text-3xl'>
          Hanzai Watchers
         </p>
         <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>
@@ -25,7 +25,7 @@ const Hero = () => {
           /> */}
         </div>
         {/* <p className='md:text-2xl text-xl font-bold text-gray-500'>Help our societies to be safer than ever. The more crime tips reported, the more points, and with that you can gain a Samurai Title.</p> */}
-        <button className='bg-[#dfc100] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Sign Up</button>
+        <button className='bg-indigo-600 w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Sign Up</button>
         {/* Add connection to sign in */}
         {/* <img src={Backdrop} alt="Backdrop"/> */}
       </div>
