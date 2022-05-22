@@ -11,6 +11,13 @@ import Logo from '../assets/images/Sharingan_Triple.png'
 // import About from './pages/About';
 // import Error from './pages/Error';
 
+function Navbar () {
+
+  return (
+    <Link to="../pages/Sign-in.jsx"></Link>
+  )
+}
+
 const navigation = [
   { name: 'Dashboard', href: '#' },
   { name: 'About', href: '#about' },
@@ -57,9 +64,8 @@ export default function Example() {
                 Blog
               </a>
               <a
-                href="#"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
-              >
+                href="#signup"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">             
                 Sign Up / Login in
               </a>
             </div>
@@ -81,8 +87,8 @@ export default function Example() {
                 <div>
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt=""
+                    src={Logo}
+                    alt="Logo"
                   />
                 </div>
                 <div className="-mr-2">

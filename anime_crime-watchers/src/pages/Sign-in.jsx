@@ -1,4 +1,5 @@
 import Logo from '../assets/images/Sharingan_Triple.png'
+import React from "react";
 
 export default function Example() {
   return (
