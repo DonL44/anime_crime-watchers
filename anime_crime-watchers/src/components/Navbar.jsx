@@ -5,7 +5,7 @@ import { ChevronRightIcon } from '@heroicons/react/solid'
 import Logo from '../assets/images/Sharingan_Triple.png'
 
 const navigation = [
-  { name: 'Dashboard', href: '' },
+  { name: 'Dashboard', href: '#' },
   { name: 'About', href: '#' },
   { name: 'Marketplace', href: '#' },
   { name: 'Contact Us', href: '#' },
