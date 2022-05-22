@@ -20,7 +20,7 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <Analytics />
+      <Analytics videoId='JFh1QWmjrGI' />
       <Blog />
       <Cards />
       <Footer />
