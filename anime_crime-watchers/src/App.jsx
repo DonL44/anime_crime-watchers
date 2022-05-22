@@ -24,21 +24,24 @@ function App() {
           <Navbar />
           <Routes>
             <Route
+              path="/"
+              element={
+                <main>
+                <Main />
+                <Hero />
+                <Search />
+                <Analytics />
+                <Blog />
+                <Group />
+                </main>
+              }
+            />
+            <Route
               path="/signup"
               element={<Signup />}
-            >
-            </Route>
-
+            />
           </Routes>
         </main>
-        <div>
-          <Main />
-          <Hero />
-          <Search />
-          <Analytics />
-          <Blog />
-          <Group />
-        </div>
       </Router>
       <Footer />
     </div>
