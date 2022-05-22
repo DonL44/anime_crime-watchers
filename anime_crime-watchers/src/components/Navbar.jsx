@@ -117,12 +117,12 @@ export default function Example() {
                     href="#"
                     className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700"
                   >
-                    Start free trial
+                    Sign Up
                   </a>
                 </div>
                 <div className="mt-6 px-5">
                   <p className="text-center text-base font-medium text-gray-500">
-                    Existing customer?{' '}
+                    Existing subscriber?{' '}
                     <a href="#" className="text-gray-900 hover:underline">
                       Login
                     </a>
@@ -176,12 +176,12 @@ export default function Example() {
                             type="submit"
                             className="block w-full py-3 px-4 rounded-md shadow bg-indigo-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
                           >
-                            Start free trial
+                            Sign Up Here
                           </button>
                         </div>
                       </div>
                       <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                        Start your free 14-day trial, no credit card necessary. By providing your email, you agree to
+                        By providing your email, you agree to
                         our{' '}
                         <a href="#" className="font-medium text-white">
                           terms of service
