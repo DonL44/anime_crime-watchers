@@ -9,7 +9,6 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Blog from './components/Blog';
 import Signup  from "./pages/Signup";
-import Search from "./components/Search"
 import "./App.css";
 
 const httpLink = createHttpLink({
@@ -34,7 +33,6 @@ function App() {
                 element={
                   <main>
                   <Hero />
-                  <Search />
                   <Analytics />
                   <Blog />
                   <Group />
