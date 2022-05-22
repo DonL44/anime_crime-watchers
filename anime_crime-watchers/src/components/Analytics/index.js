@@ -1,6 +1,5 @@
-import React from 'react';
-import Backdrop from '../assets/images/backdrop.gif'
-// import Laptop from '../assets/laptop.jpg';
+import React from "react";
+import Backdrop from '../../assets/images/backdrop.gif'
 
 const Analytics = () => {
   return (
@@ -18,15 +17,9 @@ const Analytics = () => {
           </p>
           <button className='bg-black text-indigo-600 w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>Find Crime in your Neighborhood</button>
           {/* Add map, api and submit crime tip links */}
-          {/* <img
-                    className="h-8 w-auto sm:h-80"
-                    src={Backdrop}
-                    alt="Logo"
-                  /> */}
         </div>
       </div>
     </div>
-  );
+  )
 };
-
 export default Analytics;

@@ -3,15 +3,9 @@ import { Link } from 'react-router-dom';
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
-import Logo from '../assets/images/Sharingan_Triple.png'
-// import Contact from './components/Contact';
-// import Dashboard from './components/Dashboard';
-// import Sign from './pages/Sign';
-// import Login from './pages/Sign';
-// import About from './pages/About';
-// import Error from './pages/Error';
+import Logo from '../../assets/images/Sharingan_Triple.png'
 
-function Navbar () {
+const Navbar = () => {
 
   const navigation = [
     { name: 'Dashboard', href: '#' },
@@ -19,7 +13,6 @@ function Navbar () {
     { name: 'Resources', href: '#resources' },
     { name: 'Contact Us', href: '#contact' },
   ]
-
   return (
     <div className="relative overflow-hidden">
       <Popover as="header" className="relative">
@@ -58,7 +51,7 @@ function Navbar () {
                 Blog
               </a>
               <a
-
+                href="#signup"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">             
                 Sign Up / Login in
               </a>
@@ -202,8 +195,6 @@ function Navbar () {
       </main>
     </div>
   )
-}
+};
 
 export default Navbar;
-
-

@@ -1,7 +1,8 @@
 import {SiGithub} from 'react-icons/si';
 import {SiLinkedin} from 'react-icons/si';
 
-const people = [
+const Group = () => {
+  const people = [
     {
       name: 'Tanya',
       role: 'Front-End',
@@ -36,15 +37,10 @@ const people = [
           'https://avatars.githubusercontent.com/u/95047881?v=4',
         twitterUrl: 'https://github.com/pshertzi',
         linkedinUrl: 'https://www.linkedin.com/in/paul-shertzinger-5a9869b3/',
-      },
-    // More people...
+      }
   ]
-
-
-  
-  export default function Example() {
-    return (
-      <div id="contact" className="bg-gray-900">
+  return (
+    <div id="contact" className="bg-gray-900">
         <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
           <div className="space-y-12">
             <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
@@ -86,8 +82,7 @@ const people = [
           </div>
         </div>
       </div>
-      
-    )
-  }
+  )
+};
 
-  
+export default Group;
