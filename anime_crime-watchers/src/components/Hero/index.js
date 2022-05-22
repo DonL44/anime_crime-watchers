@@ -15,7 +15,7 @@ const Hero = () => {
             Enter the Void and help your universe avoid and prevent crime by being a secret agent of peace.
           </p>
         </div>
-        <button className='bg-indigo-600 w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Sign Up</button>
+        {/* <button className='bg-indigo-600 w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Sign Up</button> */}
       </div>
     </div>
   );

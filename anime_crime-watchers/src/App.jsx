@@ -8,7 +8,8 @@ import Footer from './components/Footer/index';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Blog from './components/Blog';
-import Signup  from "./pages/Signup"
+import Signup  from "./pages/Signup";
+import Main from "./components/Main";
 import "./App.css";
 
 
@@ -16,22 +17,29 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <main>
-        <Router>
+      <Router>
+
+        <main>
+          <Navbar />
           <Routes>
             <Route
-            path="/signup"
-            element={<Signup />}>
+              path="/signup"
+              element={<Signup />}
+            >
             </Route>
+
           </Routes>
-        </Router>
-      </main>
-      
-      <Analytics />
-      <Blog />
-      <Group />
+        </main>
+        <div>
+          
+          <Main />
+          <Hero />
+          <Analytics />
+          <Blog />
+          <Group />
+        </div>
+        
+      </Router>
       <Footer />
     </div>
   );
