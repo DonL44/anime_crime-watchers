@@ -1,7 +1,7 @@
 const navigation = {
   solutions: [
     { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
+    { name: 'Search', href: '#' },
     { name: 'Commerce', href: '#' },
     { name: 'Insights', href: '#' },
   ],

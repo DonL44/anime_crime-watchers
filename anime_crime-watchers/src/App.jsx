@@ -1,10 +1,10 @@
 import React from "react";
 // import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
-import Analytics from './components/Analytics';
-import Cards from './components/Cards';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
+import Search from './components/Search';
+import Contact from './components/Contact';
+import Resources from './components/Resources';
+import Learn from './components/Learn';
 import Navbar from './components/Navbar';
 import Blog from './components/Blog';
 import SignIn  from "./components/SignIn";
@@ -20,12 +20,12 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <Analytics />
+      <Learn />
+      <Search />
       <Blog />
-      <Cards />
+      <Contact />
       <SignIn />
-      <Footer />
+      <Resources />
     </div>
   );
 }

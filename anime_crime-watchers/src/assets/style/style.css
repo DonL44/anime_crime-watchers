@@ -23,7 +23,7 @@ h1 {
   }
 
 
-.hero {
+.learn {
     display: flex;
     width: 100%;
     height: 100%;
@@ -71,6 +71,6 @@ h1 {
     
 }
 
-footer.footer-section {
+resources.footer-section {
     background-color: black;
 }

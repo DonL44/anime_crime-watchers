@@ -2,7 +2,7 @@ import React from 'react';
 import Backdrop from '../assets/images/backdrop.gif'
 // import Laptop from '../assets/laptop.jpg';
 
-const Analytics = () => {
+const Search = () => {
   return (
     <div id="about" className='w-full bg-white py-16 px-4'>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
@@ -29,4 +29,4 @@ const Analytics = () => {
   );
 };
 
-export default Analytics;
+export default Search;
