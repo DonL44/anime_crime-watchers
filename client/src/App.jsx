@@ -1,5 +1,4 @@
 import React from "react";
-// import React, { Component } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 
@@ -10,7 +9,6 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Blog from './components/Blog';
 import Signup  from "./pages/Signup";
-import Main from "./components/Main";
 import Search from "./components/Search"
 import "./App.css";
 
@@ -35,7 +33,6 @@ function App() {
                 path="/"
                 element={
                   <main>
-                  <Main />
                   <Hero />
                   <Search />
                   <Analytics />
