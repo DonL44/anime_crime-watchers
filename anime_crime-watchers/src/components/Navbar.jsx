@@ -4,6 +4,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import Logo from '../assets/images/Sharingan_Triple.png'
+import Signup from './SignIn'
 // import Contact from './components/Contact';
 // import Dashboard from './components/Dashboard';
 // import Sign from './pages/Sign';
@@ -72,8 +73,7 @@ export default function Example() {
               </a>
             </div>
           </nav>
-        </div>
-
+        </div>         
         <Transition
           as={Fragment}
           enter="duration-150 ease-out"

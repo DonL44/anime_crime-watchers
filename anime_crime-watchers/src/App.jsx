@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Blog from './components/Blog';
-import { Signup } from "./pages/Sign-in";
+import SignIn  from "./components/SignIn";
 import "./App.css";
 
 // class App extends Component {
@@ -24,6 +24,7 @@ function App() {
       <Analytics />
       <Blog />
       <Cards />
+      <SignIn />
       <Footer />
     </div>
   );
