@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import Blog from './components/Blog';
 import Signup  from "./pages/Signup";
 import Main from "./components/Main";
+import Search from "./components/Search"
 import "./App.css";
 
 
@@ -33,6 +34,7 @@ function App() {
         <div>
           <Main />
           <Hero />
+          <Search />
           <Analytics />
           <Blog />
           <Group />
