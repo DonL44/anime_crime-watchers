@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import YouTube from 'react-youtube'
+import React, { Component } from 'react';
+import YouTube from 'react-youtube';
 
-// https://www.youtube.com/watch?v=-_pgcFQ0l64
-// https://youtu.be/-_pgcFQ0l64
+
 // https://www.youtube.com/watch?v=JFh1QWmjrGI
 class ReactYouTube extends Component {
   videoOnReady (event) {
@@ -27,7 +26,7 @@ class ReactYouTube extends Component {
       height: '390',
       width: '640',
       playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 1
+        autoplay: 0
       }
     }
     const {videoId} = this.props
