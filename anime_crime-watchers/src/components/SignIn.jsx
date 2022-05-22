@@ -1,4 +1,5 @@
 import Logo from '../assets/images/Sharingan_Triple.png'
+import Banner from '../assets/images/hanzai_watchers.gif'
 import React from "react";
 
 export default function Example() {
@@ -154,8 +155,8 @@ export default function Example() {
         <div className="hidden lg:block relative w-0 flex-1">
           <img
             className="absolute inset-0 h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1505904267569-f02eaeb45a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
-            alt=""
+            src={Banner}
+            alt="Banner"
           />
         </div>
       </div>
