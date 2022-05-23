@@ -7,6 +7,13 @@ export const QUERY_POSTS = gql`
       postText
       createdAt
       username
+      commentCount
+      comments {
+        _id
+        createdAt
+        username
+        commentText
+      }
     }
   }
 `;
@@ -18,6 +25,13 @@ export const QUERY_POST = gql`
       postText
       createdAt
       username
+      commentCount
+      comments {
+        _id
+        createdAt
+        username
+        commentText
+      }
     }
   }
 `;
@@ -37,7 +51,7 @@ export const QUERY_USER = gql`
         _id
         postText
         createdAt
-        reactionCount
+        commentCount
       }
     }
   }

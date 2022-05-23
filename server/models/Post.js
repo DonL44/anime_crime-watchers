@@ -1,42 +1,44 @@
-const { Schema, model } = require('mongoose');
-const commentSchema = require('./Comment');
+const { Schema, model } = require("mongoose");
+const commentSchema = require("./Comment");
+const dateFormat = require("../utils/dateFormat");
 
 const postSchema = new Schema(
   {
     postTitle: {
       type: String,
-      required: 'Let us know what this post is about!',
+      required: "Let us know what this post is about!",
       minlength: 1,
-      maxlength: 60
+      maxlength: 60,
     },
     postText: {
       type: String,
-      required: '...you forgot to write something...',
+      required: "...you forgot to write something...",
       minlength: 3,
-      maxlength: 500
+      maxlength: 500,
     },
     createdAt: {
       type: Date,
-      default: Date.now
+      default: Date.now,
+      get: (timestamp) => dateFormat(timestamp),
     },
     username: {
       type: String,
-      required: true
+      required: true,
     },
-    comments: [commentSchema]
+    comments: [commentSchema],
   },
   {
     toJson: {
       getters: true,
-      virtuals: true
-    }
+      virtuals: true,
+    },
   }
 );
 
-postSchema.virtual('commentCount').get(function() {
+postSchema.virtual("commentCount").get(function () {
   return this.comments.length;
 });
 
-const Post = model('Post', postSchema);
+const Post = model("Post", postSchema);
 
 module.exports = Post;

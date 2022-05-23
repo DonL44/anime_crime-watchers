@@ -9,7 +9,7 @@ import Logo from "../../assets/images/Sharingan_Triple.png";
 
 const Navbar = () => {
   const navigation = [
-    { name: "Dashboard", href: "#" },
+    // { name: "Dashboard", href: "#" },
     { name: "About", href: "#about" },
     { name: "Resources", href: "#resources" },
     { name: "Contact Us", href: "#contact" },
@@ -49,11 +49,17 @@ const Navbar = () => {
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
               <a
-                href="/post"
+                href="/Post"
                 className="text-base font-medium text-white hover:text-gray-300"
               >
-                Blog
+                Posts
               </a>
+              <Link
+                to="/profile"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
+              >
+                Profile
+              </Link>
               <Link
                 to="/signup"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"

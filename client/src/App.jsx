@@ -7,9 +7,9 @@ import Group from './components/Group';
 import Footer from './components/Footer/index';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
-//import Blog from './components/Blog';
+import Blog from './components/Blog';
 
-import Blog from "./pages/Blog";
+import Post from "./pages/Post";
 import SinglePost from './pages/singlePost';
 import Signup  from "./pages/Signup";
 import Login from './pages/Login';
@@ -21,6 +21,8 @@ import "./App.css";
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
 });
+
+
 
 const client = new ApolloClient({
   link: httpLink,
@@ -36,16 +38,17 @@ function App() {
             <Navbar />
             <Hero />
             <Routes>
-              <Route path="/Blog" element={<Blog />} />
-              <Route path="/Post" element={<SinglePost />} />
+              <Route path="/Post" element={<Post />} />
+              <Route path="/Post/:id" element={<SinglePost />} />
               <Route path="/signup" element={<Signup />}/>
               <Route path="/login" element={<Login />}/>
-              <Route path="/profile" element={<Profile />}/>
+              <Route path="/profile/:username" element={<Profile />}/>
               <Route path="*" element={<Error />}/>
             </Routes>
           </main>
         </Router>
         <Analytics />
+        <Blog />
          <Group />
         <Footer />
       </div>
