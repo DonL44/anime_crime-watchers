@@ -5,11 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon",
     "start": "node server.js",
     "seed": "node seeders/seeds.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -19,10 +17,7 @@
     "faker": "^6.6.6",
     "graphql": "^16.5.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.3.3",
+    "mongoose": "^6.3.4",
     "nodemon": "^2.0.16"
-  },
-  "devDependencies": {
-    "@faker-js/faker": "^6.3.1"
   }
 }

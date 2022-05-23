@@ -26,6 +26,30 @@ export const ADD_USER = gql`
   }
 `;
 
+export const ADD_POST = gql`
+  mutation addPost($postText: String!) {
+    addpost(postText: $postText) {
+      _id
+      postText
+      createdAt
+      username
+    }
+  }
+`;
+
+export const REMOVE_FRIEND = gql`
+  mutation removeFriend($id: ID!) {
+    removeFriend(id: $id) {
+      _id
+      username
+      friends {
+        _id
+        username
+      }
+    }
+  }
+`;
+
 // export const SAVE_SAMURAI = gql`
 //   mutation savesamurai($input: samuraiInput!) {
 //     savesamurai(input: $input) {

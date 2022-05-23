@@ -8,6 +8,8 @@ import Footer from './components/Footer/index';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Blog from './components/Blog';
+
+import Home from "./pages/home";
 import Signup  from "./pages/Signup";
 import "./App.css";
 
@@ -27,25 +29,16 @@ function App() {
         <Router>
           <main>
             <Navbar />
+            <Hero />
             <Routes>
-              <Route
-                path="/"
-                element={
-                  <main>
-                  <Hero />
-                  <Analytics />
-                  <Blog />
-                  <Group />
-                  </main>
-                }
-              />
-              <Route
-                path="/signup"
-                element={<Signup />}
-              />
+            <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<Signup />}/>
+
             </Routes>
           </main>
         </Router>
+        <Analytics />
+         <Group />
         <Footer />
       </div>
     </ApolloProvider>
