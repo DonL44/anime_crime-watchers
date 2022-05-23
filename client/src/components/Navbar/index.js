@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { ChevronRightIcon } from "@heroicons/react/solid";
+import auth from "../../utils/auth";
 
 import Logo from "../../assets/images/Sharingan_Triple.png";
 
