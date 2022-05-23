@@ -10,6 +10,7 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Blog from './components/Blog';
 
+import Home from "./pages/Home";
 import Post from "./pages/Post";
 import SinglePost from './pages/singlePost';
 import Signup  from "./pages/Signup";
@@ -50,11 +51,12 @@ function App() {
             <Navbar />
             <Hero />
             <Routes>
-            <Route path="/" element={<Post />} />
+            <Route path="/" element={<Home />} />
               <Route path="/Post" element={<Post />} />
               <Route path="/Post/:id" element={<SinglePost />} />
               <Route path="/signup" element={<Signup />}/>
               <Route path="/login" element={<Login />}/>
+              <Route path="/profile" element={<Profile />} />
               <Route path="/profile/:username" element={<Profile />}/>
               <Route path="*" element={<Error />}/>
             </Routes>

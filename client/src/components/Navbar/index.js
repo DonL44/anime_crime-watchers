@@ -9,6 +9,10 @@ import auth from "../../utils/auth";
 import Logo from "../../assets/images/Sharingan_Triple.png";
 
 const Navbar = () => {
+  const logout = (event) => {
+    event.preventDefault();
+    auth.logout();
+  };
   const navigation = [
     // { name: "Dashboard", href: "#" },
     { name: "About", href: "#about" },
@@ -61,6 +65,9 @@ const Navbar = () => {
               >
                 Profile
               </Link>
+              <a href="/" onClick={logout}>
+                Logout
+              </a>
               <Link
                 to="/signup"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"

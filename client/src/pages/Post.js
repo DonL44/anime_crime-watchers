@@ -1,15 +1,11 @@
 import React from "react";
 import PostList from "../components/postList";
-import PostForm from "../components/postForm";
-import FriendList from "../components/FriendList";
 
-import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
-import { QUERY_POSTS, QUERY_ME_BASIC } from "../utils/queries";
+import { QUERY_POSTS } from "../utils/queries";
 
-const Home = () => {
+const Post = () => {
   const { loading, data } = useQuery(QUERY_POSTS);
-  const { data: userData } = useQuery(QUERY_ME_BASIC);
   const posts = data?.posts || [];
 
   console.log(posts);
@@ -31,4 +27,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Post;
