@@ -26,39 +26,3 @@ export const ADD_USER = gql`
   }
 `;
 
-// export const SAVE_SAMURAI = gql`
-//   mutation savesamurai($input: samuraiInput!) {
-//     savesamurai(input: $input) {
-//       _id
-//       username
-//       email
-//       savedsamurais {
-//         samuraiId
-//         authors
-//         description
-//         title
-//         image
-// lololol
-//         link
-//       }
-//     }
-//   }
-// `;
-
-// export const REMOVE_SAMURAI = gql`
-//   mutation removesamurai($samuraiId: ID!) {
-//     removesamurai(samuraiId: $samuraiId) {
-//       _id
-//       username
-//       email
-//       savedsamurais {
-//         samuraiId
-//         authors
-//         description
-//         title
-//         image
-//         link
-//       }
-//     }
-//   }
-// `;

@@ -35,14 +35,14 @@ function App() {
                 element={<Home />}
               />
               
-              {/* <Route
+              <Route
                 path="/signup"
                 element={<Signup />}
               />
               <Route
                 path="/login"
                 element={<Login />}
-              /> */}
+              />
               
             </Routes>
           </main>
