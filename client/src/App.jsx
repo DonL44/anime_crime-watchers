@@ -10,7 +10,7 @@ import Navbar from './components/Navbar';
 import Blog from './components/BlogPosts';
 import Signup  from "./pages/Signup";
 import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
+import Home from './pages/Home';
 import "./App.css";
 
 const httpLink = createHttpLink({
@@ -32,7 +32,7 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={<Dashboard />}
+                element={<Home />}
               />
               
               {/* <Route

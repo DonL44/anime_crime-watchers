@@ -1,11 +1,11 @@
 import { useQuery } from '@apollo/client';
 import { QUERY_POSTS } from '../utils/queries';
 import BlogPosts from '../components/BlogPosts';
-import Hero from '../components/Hero';
+// import Hero from '../components/Hero';
 import Analytics from '../components/Analytics';
 import Group from '../components/Group';
 
-const Dashboard = ({ user }) => {
+const Home = ({ user }) => {
   const { loading, data } = useQuery(QUERY_POSTS);
   const posts = data?.posts || [];
   console.log(posts)
@@ -25,4 +25,4 @@ const Dashboard = ({ user }) => {
       </main>
     );
   };
-  export default Dashboard;
+  export default Home;
