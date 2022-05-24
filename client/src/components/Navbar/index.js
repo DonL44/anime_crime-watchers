@@ -10,7 +10,7 @@ import Logo from '../../assets/images/Sharingan_Triple.png'
 const Navbar = () => {
 
   const navigation = [
-    { name: 'Dashboard', href: '#' },
+    { name: 'Dashboard', href: '../Dashboard' },
     { name: 'About', href: '#about' },
     { name: 'Resources', href: '#resources' },
     { name: 'Contact Us', href: '#contact' },
