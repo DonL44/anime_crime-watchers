@@ -7,7 +7,7 @@ import Group from './components/Group';
 import Footer from './components/Footer/index';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
-import Blog from './components/Blog';
+import Blog from './components/BlogPosts';
 import Signup  from "./pages/Signup";
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
@@ -32,6 +32,10 @@ function App() {
             <Routes>
               <Route
                 path="/"
+                element={<Dashboard />}
+              />
+              {/* <Route
+                path="/"
                 element={
                   <main>
                   <Hero />
@@ -40,19 +44,16 @@ function App() {
                   <Group />
                   </main>
                 }
-              />
-              <Route
+              /> */}
+              {/* <Route
                 path="/signup"
                 element={<Signup />}
               />
               <Route
                 path="/login"
                 element={<Login />}
-              />
-              <Route
-                path="/dashboard"
-                element={<Dashboard />}
-              />
+              /> */}
+              
             </Routes>
           </main>
         </Router>

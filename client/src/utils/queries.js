@@ -1,20 +1,20 @@
-// import gql from "graphql-tag";
+import { gql } from '@apollo/client';
 
-// export const QUERY_ME = gql`
-//   {
-//     me {
-//       _id
-//       username
-//       email
-//       samuraiCount
-//       savedsamurais {
-//         samuraiId
-//         authors
-//         description
-//         title
-//         image
-//         link
-//       }
-//     }
-//   }
-// `;
+export const QUERY_POSTS = gql`
+  query posts($username: String) {
+    posts(username: $username) {
+      _id
+      postTitle
+      postText
+      createdAt
+      username
+      commentCount
+      comments {
+        _id
+        createdAt
+        username
+        commentText
+      }
+    }
+  }
+`;
