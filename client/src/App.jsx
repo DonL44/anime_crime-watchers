@@ -34,17 +34,7 @@ function App() {
                 path="/"
                 element={<Dashboard />}
               />
-              {/* <Route
-                path="/"
-                element={
-                  <main>
-                  <Hero />
-                  <Analytics />
-                  <Blog />
-                  <Group />
-                  </main>
-                }
-              /> */}
+              
               {/* <Route
                 path="/signup"
                 element={<Signup />}

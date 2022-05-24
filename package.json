@@ -2,7 +2,7 @@
   "name": "anime_crime-watchers",
   "version": "1.0.0",
   "description": "![The Hanzai Project](anime_crime-watchers/src/assets/images/hanzai_watchers.gif)",
-  "main": "index.js",
+  "main": "server/server.js",
   "devDependencies": {
     "concurrently": "^7.2.0"
   },
