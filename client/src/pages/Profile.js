@@ -30,7 +30,7 @@ const Profile = () => {
 
   if (!user?.username) {
     return (
-      <h4>
+      <h4 style={{color: 'white'}}>
         You need to be logged in to see this page. Use the navigation links above to sign up or log in!
       </h4>
     );

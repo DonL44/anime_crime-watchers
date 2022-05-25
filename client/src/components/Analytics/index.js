@@ -26,7 +26,7 @@ const Analytics = () => {
                 </p>
                 <div className="mt-6">
                   <a
-                    href="#"
+                    href="https://crimegrade.org/crime-by-zip-code/"
                     className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
                   >
                     Search

@@ -12,7 +12,7 @@ const Home = ({ user }) => {
   console.log(posts)
 
     return (
-      <main>
+      <main className='d-flex flex-column min-vh-100'>
         <div>
           <Hero />
           <Analytics />
