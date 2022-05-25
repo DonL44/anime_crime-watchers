@@ -4,7 +4,7 @@ import BlogPosts from '../components/BlogPosts';
 import Hero from '../components/Hero';
 import Analytics from '../components/Analytics';
 import Group from '../components/Group';
-import Villian from '../components/Villian';
+
 
 const Home = ({ user }) => {
   const { loading, data } = useQuery(QUERY_POSTS);
