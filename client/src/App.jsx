@@ -16,6 +16,7 @@ import Dashboard from './components/Dashboard';
 import User from './components/User';
 import "./App.css";
 import SingleBlogPost from "./pages/SingleBlogPost";
+import Profile from "./pages/Profile"
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -68,6 +69,10 @@ function App() {
               <Route
                 path="/dashboard"
                 element={<Dashboard />}
+              />
+              <Route
+                path="/profile"
+                element={<Profile />}
               />
             </Routes>
           </main>

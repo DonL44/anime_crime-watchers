@@ -31,6 +31,7 @@ const Navbar = () => {
                 <a href='#about' className="text-base font-medium text-white hover:text-gray-300">About</a>
                 <a href='#footer-heading' className="text-base font-medium text-white hover:text-gray-300">Resources</a>
                 <a href='#contact' className="text-base font-medium text-white hover:text-gray-300">Contact Us</a>
+              <Link to="/profile" className="text-base font-medium text-white hover:text-gray-300">Profile</Link>
             </div>
           </div>
           <div className="hidden lg:flex lg:items-center lg:space-x-6">
@@ -50,6 +51,7 @@ const Navbar = () => {
           <a href='#about' className="text-base font-medium text-white hover:text-gray-300">About</a>
           <a href='#footer-heading' className="text-base font-medium text-white hover:text-gray-300">Resources</a>
           <a href='#contact' className="text-base font-medium text-white hover:text-gray-300">ContactUs</a>
+          <Link to="/profile" className="text-base font-medium text-white hover:text-gray-300">Profile</Link>
           <a href="#blog" className="text-base font-medium text-white hover:text-gray-300">
                 Blog
               </a>
