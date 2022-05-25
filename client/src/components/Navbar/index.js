@@ -10,12 +10,11 @@ import Logo from '../../assets/images/Sharingan_Triple.png'
 
 const Navbar = () => {
 
-  const navigation = [
-    { name: 'Dashboard', href: '../Dashboard' },
-    { name: 'About', href: '#about' },
-    { name: 'Resources', href: '#resources' },
-    { name: 'Contact Us', href: '#contact' },
-  ]
+  const logout = event => {
+    event.preventDefault();
+    Auth.logout();
+  }
+
   return (
     
     <div className="relative overflow-hidden">
@@ -24,9 +23,48 @@ const Navbar = () => {
         <div className="bg-gray-900 pt-6">
           <nav
             className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
-            aria-label="Global"
-          >
+            aria-label="Global">
+            {Auth.loggedIn() ? (
+            <>
             <div className="flex items-center flex-1">
+              <div className="flex items-center justify-between w-full md:w-auto">
+                <Link to="/">
+                  <span className="sr-only">Hanzai Watchers</span>
+                  <img
+                    className="h-8 w-auto sm:h-10"
+                    src={Logo}
+                    alt="Logo"
+                  />
+                </Link>
+                <div className="-mr-2 flex items-center md:hidden">
+                  <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                    <span className="sr-only">Open main menu</span>
+                    <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                  </Popover.Button>
+                </div>
+              </div>
+              <div className="hidden space-x-8 md:flex md:ml-10">
+                <a className="text-base font-medium text-white hover:text-gray-300">Dashboard</a>
+                <a className="text-base font-medium text-white hover:text-gray-300">About</a>
+                <a className="text-base font-medium text-white hover:text-gray-300">Resources</a>
+                <a className="text-base font-medium text-white hover:text-gray-300" >ContactUs</a>
+              </div>
+            </div>
+            <div className="hidden md:flex md:items-center md:space-x-6">
+              <a href="#blog" className="text-base font-medium text-white hover:text-gray-300">
+                Blog
+              </a>
+              <Link
+                to="/"
+                onClick={logout}
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">             
+                Logout
+              </Link>
+            </div>
+            </>
+          ) : (
+            <>
+              <div className="flex items-center flex-1">
               <div className="flex items-center justify-between w-full md:w-auto">
                 <Link to="/">
                   <span className="sr-only">Hanzai Watchers</span>
@@ -65,6 +103,47 @@ const Navbar = () => {
                 Log in 
               </Link>
             </div>
+            </>
+          )}
+            {/* <div className="flex items-center flex-1">
+              <div className="flex items-center justify-between w-full md:w-auto">
+                <Link to="/">
+                  <span className="sr-only">Hanzai Watchers</span>
+                  <img
+                    className="h-8 w-auto sm:h-10"
+                    src={Logo}
+                    alt="Logo"
+                  />
+                </Link>
+                <div className="-mr-2 flex items-center md:hidden">
+                  <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                    <span className="sr-only">Open main menu</span>
+                    <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                  </Popover.Button>
+                </div>
+              </div>
+              <div className="hidden space-x-8 md:flex md:ml-10">
+                <a className="text-base font-medium text-white hover:text-gray-300">Dashboard</a>
+                <a className="text-base font-medium text-white hover:text-gray-300">About</a>
+                <a className="text-base font-medium text-white hover:text-gray-300">Resources</a>
+                <a className="text-base font-medium text-white hover:text-gray-300" >ContactUs</a>
+              </div>
+            </div>
+            <div className="hidden md:flex md:items-center md:space-x-6">
+              <a href="#blog" className="text-base font-medium text-white hover:text-gray-300">
+                Blog
+              </a>
+              <Link
+                to="/signup"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">             
+                Sign Up 
+              </Link>
+              <Link
+                to="/login"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">             
+                Log in 
+              </Link>
+            </div> */}
           </nav>
         </div>
 
