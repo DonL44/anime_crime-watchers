@@ -65,6 +65,10 @@ function App() {
                 path="/user"
                 element={<User />}
               />
+              <Route
+                path="/dashboard"
+                element={<Dashboard />}
+              />
             </Routes>
           </main>
         </Router>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
+import Auth from '../../utils/auth'
 
 import Logo from '../../assets/images/Sharingan_Triple.png'
 
@@ -43,11 +44,10 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="hidden space-x-8 md:flex md:ml-10">
-                {navigation.map((item) => (
-                  <a key={item.name} href={item.href} className="text-base font-medium text-white hover:text-gray-300">
-                    {item.name}
-                  </a>
-                ))}
+                <a className="text-base font-medium text-white hover:text-gray-300">Dashboard</a>
+                <a className="text-base font-medium text-white hover:text-gray-300">About</a>
+                <a className="text-base font-medium text-white hover:text-gray-300">Resources</a>
+                <a className="text-base font-medium text-white hover:text-gray-300" >ContactUs</a>
               </div>
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
@@ -57,7 +57,12 @@ const Navbar = () => {
               <Link
                 to="/signup"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">             
-                Sign Up / Login 
+                Sign Up 
+              </Link>
+              <Link
+                to="/login"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">             
+                Log in 
               </Link>
             </div>
           </nav>
@@ -91,15 +96,10 @@ const Navbar = () => {
               </div>
               <div className="pt-5 pb-6">
                 <div className="px-2 space-y-1">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
+                <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Dashboard</a>
+                <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">About</a>
+                <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Resources</a>
+                <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">ContactUs</a>
                 </div>
                 <div className="mt-6 px-5">
                   <a
