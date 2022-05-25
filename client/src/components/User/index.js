@@ -4,16 +4,51 @@ import Dashboard from '../Dashboard';
 
 
 function User() {
-	const dashboard = [
+	const users = [
 		{
-			name: 'Minamoto no Yoshitsune',
+			name: 'Emperor Meiji',
 			description:
-				'Access Tennessee is an app that strives to make this state more accommodating and accessible to all people.',
-			image: '../../assets/images/hanzai_watchers.gif',
+				'Japanese Emperor',
+			image: '#',
+			technologies: [
+				'Emperor', 
+				' Leader',
+				' Strong',
+				
+			],
+		},
+		{
+			name: 'Marco Polo',
+			description:
+				'Traveler',
+			image: '#',
+			technologies: [
+				'Business',
+				' Leader',
+				' Traveler',
+				
+			],
+		},
+		{
+			name: 'Confucius',
+			description:
+				'Teacher',
+			image: '#',
+			technologies: [
+				' Chinese Teacher',
+				'Political Leader',
+	
+			],
 			
 		},
-		
-		
+		{
+			name: 'Nintendo Yamaha',
+			description:
+				'Gamer and Musician',
+			image: '#',
+			technologies: ['Animal Crossings', ' Piano', '  Hacker'],
+			
+		},
 			];
 
 	return (
@@ -24,25 +59,25 @@ function User() {
 			<div>
 				<ul className="flex-row mobile-row">
 					<li className="padding">
-						<Dashboard dashboard={dashboard[0]}></Dashboard>
+						<Dashboard users={users[0]}></Dashboard>
 					</li>
-					{/* <li className="padding">
-						<Project dashboard={dashboard[1]}></Project>
-					</li> */}
+					<li className="padding">
+						<Dashboard users={users[1]}></Dashboard>
+					</li> 
 				</ul>
-				{/* <ul className="flex-row mobile-row">
+				<ul className="flex-row mobile-row">
 					<li className="padding">
-						<Project dashboard={dashboard[2]}></Project>
+						<Dashboard users={users[2]}></Dashboard>
 					</li>
 					<li className="padding">
-						<Project dashboard={dashboard[3]}></Project>
+						<Dashboard users={users[3]}></Dashboard>
 					</li>
 				</ul>
 				<ul className="flex-row mobile-row">
 					<li className="padding">
-						<Project dashboard={dashboard[4]}></Project>
+						<Dashboard users={users[4]}></Dashboard>
 					</li>
-				</ul> */}
+				</ul>
 			</div>
 		</section>
 	);
