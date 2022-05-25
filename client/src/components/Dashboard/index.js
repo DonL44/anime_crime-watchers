@@ -10,7 +10,7 @@ function Dashboard(props) {
 				<Card.Body>
 				
 					<image
-					src={require(`../../assets/images/${props.users.imgage}`)}
+					src={require(`../../assets/images/${props.users.image}`)}
 					alt="user's profile picture"
 					className="photo"
 				/>
