@@ -4,7 +4,7 @@ import Group from '../Group';
 class Dashboard extends Component {
   state = {
     data: [],
-    per: 6,
+    per: 24,
     page: 1,
     total_pages: null
   };
@@ -79,7 +79,7 @@ class Dashboard extends Component {
           ))}
         </div>
         <button
-          className="btn btn-light btn-block w-50 mx-auto"
+          className="btn btn-light btn-block w-50 mx-auto  "
           onClick={e => {
             this.loadMore();
           }}
