@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/DonL44/anime_crime-watchers/issues"
   },
-  "homepage": "https://github.com/DonL44/anime_crime-watchers#readme"
+  "homepage": "https://github.com/DonL44/anime_crime-watchers#readme",
+  "dependencies": {
+    "react-native": "^0.68.2"
+  }
 }
