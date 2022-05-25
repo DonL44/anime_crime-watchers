@@ -44,7 +44,7 @@ const BlogPosts = ({ posts, title }) => {
           {posts && posts.map((post) => (
             <div key={post._id}>
               <p className="text-sm text-gray-500">
-                {post.username} wrote on {post.createdAt}
+                <Link to={`/profile/${post.username}`}>{post.username}</Link> wrote on {post.createdAt}
               </p>
               <div className="mt-2 block">
                 <Link to={`/post/${post._id}`}>

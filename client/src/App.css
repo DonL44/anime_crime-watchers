@@ -188,3 +188,16 @@ p {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+.friend-btn:hover {
+  
+  border: #6835cd solid 2px;
+  border-radius: 10px;
+}
+.friend:hover {
+  color: #6835cd;
+}
+.friend-btn {
+  margin: 10px;
+  padding: 10px;
+}

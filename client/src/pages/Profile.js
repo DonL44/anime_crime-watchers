@@ -3,12 +3,14 @@ import BlogPosts from "../components/BlogPosts";
 import Auth from '../utils/auth';
 import { Navigate, useParams } from 'react-router-dom';
 
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
+import { ADD_FRIEND } from "../utils/mutations";
 import FriendList from "../components/FriendList";
 
 
 const Profile = () => {
+  const [addFriend] = useMutation(ADD_FRIEND);
   const { username: userParam } = useParams();
 
   const { loading, data } = useQuery(userParam ? QUERY_USER: QUERY_ME, {
@@ -32,6 +34,15 @@ const Profile = () => {
       </h4>
     );
   }
+  const handleClick = async () => {
+    try {
+      await addFriend({
+        variables: { id: user._id }
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  };
   return (
     <>
     <div className="page-content page-container" id="page-content" >
@@ -43,11 +54,13 @@ const Profile = () => {
                     <div className="col-sm-4 bg-c-lite-green bg-indigo-600 user-profile">
                         <div className=" text-center text-white">
                             <div className="m-b-25">
-                                <img src="https://img.icons8.com/bubbles/100/000000/user.png" className="img-radius" alt="User-Profile-Image" />
+                               
                             </div>
-                            <h1 className="f-w-600">{user.username}</h1>
+                            <p style={{fontSize: '30px'}}>{user.username}</p>
                             <h2>Profile</h2>
-                            <i className=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                            <button className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700" onClick={handleClick}>
+                              Add Friend
+                            </button>
                         </div>
                     </div>
                     <div className="col-sm-8">
@@ -65,12 +78,15 @@ const Profile = () => {
                             <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                             <div className="row">
                                 <div className="col-sm-6">
-                                    <h2 className="m-b-10 f-w-600">Friends</h2>
-                                    <FriendList
+                                    <h2 className="m-b-20 p-b-5 b-b-default f-w-600">Friends</h2>
+                                    <div className="col-12 col-lg-3">
+                                      <FriendList 
                                       username={user.username}
                                       friendCount={user.friendCount}
                                       friends={user.friends}
                                     />
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
