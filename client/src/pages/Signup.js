@@ -55,7 +55,7 @@ const ADD = () => {
 
   return (
     <>
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+      <Form noValidate validated={validated} onSubmit={handleFormSubmit} className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
         <Alert
           dismissible
           onClose={() => setShowAlert(false)}
@@ -64,14 +64,15 @@ const ADD = () => {
         >
           Something went wrong with your SignUp credentials!
         </Alert>
-        <Form.Group>
-          <Form.Label htmlFor="email">Email</Form.Label>
+        <Form.Group className="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+          <Form.Label htmlFor="email" className="mb-8 text-3xl text-center">Email</Form.Label>
           <Form.Control
             type="text"
             placeholder="Your email"
             name="email"
             onChange={handleInputChange}
             value={userFormData.email}
+            className="block border border-grey-light w-full p-3 rounded mb-4"
             required
           />
           <Form.Control.Feedback type="invalid">
@@ -79,7 +80,7 @@ const ADD = () => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="bg-white px-6 py-8 rounded shadow-md text-black w-full">
           <Form.Label htmlFor="password">Password</Form.Label>
           <Form.Control
             type="password"
@@ -87,9 +88,10 @@ const ADD = () => {
             name="password"
             onChange={handleInputChange}
             value={userFormData.password}
+            className="block border border-grey-light w-full p-3 rounded mb-4"
             required
           />
-          <Form.Control.Feedback type="invalid">
+          <Form.Control.Feedback type="invalid" >
             Password is required!
           </Form.Control.Feedback>
         </Form.Group>
@@ -97,6 +99,7 @@ const ADD = () => {
           disabled={!(userFormData.email && userFormData.password)}
           type="submit"
           variant="success"
+          className="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
         >
           Submit
         </Button>
