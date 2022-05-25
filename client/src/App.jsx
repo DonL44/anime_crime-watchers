@@ -13,6 +13,7 @@ import Signup  from "./pages/Signup";
 import Login from './pages/Login';
 import Home from './pages/Home';
 import "./App.css";
+import SingleBlogPost from "./pages/SingleBlogPost";
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -54,7 +55,10 @@ function App() {
                 path="/login"
                 element={<Login />}
               />
-              
+              <Route
+                path="post/:id"
+                element={<SingleBlogPost />}
+              />
             </Routes>
           </main>
         </Router>
