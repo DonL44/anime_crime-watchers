@@ -12,6 +12,8 @@ import Blog from './components/BlogPosts';
 import Signup  from "./pages/Signup";
 import Login from './pages/Login';
 import Home from './pages/Home';
+import Dashboard from './components/Dashboard';
+import User from './components/User';
 import "./App.css";
 import SingleBlogPost from "./pages/SingleBlogPost";
 
@@ -58,6 +60,10 @@ function App() {
               <Route
                 path="post/:id"
                 element={<SingleBlogPost />}
+              />
+              <Route
+                path="/user"
+                element={<User />}
               />
             </Routes>
           </main>
