@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { QUERY_POSTS } from '../utils/queries';
 import BlogPosts from '../components/BlogPosts';
-// import Hero from '../components/Hero';
+import Hero from '../components/Hero';
 import Analytics from '../components/Analytics';
 import Group from '../components/Group';
 
@@ -13,7 +13,7 @@ const Home = ({ user }) => {
     return (
       <main>
         <div>
-          {/* <Hero /> */}
+          <Hero />
           <Analytics />
           {loading ? (
             <div>Loading...</div>

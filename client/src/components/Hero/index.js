@@ -2,23 +2,23 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className='text-white'>
-      <div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
-        <p className='text-indigo-600 font-bold p-2 text-3xl'>
-          Hanzai Watchers
+    <div className="relative bg-indigo-800">
+      <div className="absolute inset-0">
+        <img
+          className="w-full h-full object-cover"
+          src="https://media.giphy.com/media/Z9PHV1JPBCYUzZu4uX/giphy.gif"
+          alt="/"
+        />
+        <div className="absolute inset-0 bg-indigo-800 mix-blend-multiply" aria-hidden="true" />
+      </div>
+      <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Become a Samurai!</h1>
+        <p className="mt-6 text-xl text-indigo-100 max-w-3xl">
+        Enter the Void and help your universe avoid and prevent crime by being a secret agent of peace.
         </p>
-        <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>
-        Become a Samurai!
-        </h1>
-        <div className='flex justify-center items-center'>
-          <p className='md:text-5xl sm:text-4xl text-xl font-bold py-4'>
-            Enter the Void and help your universe avoid and prevent crime by being a secret agent of peace.
-          </p>
-        </div>
-        <button className='bg-indigo-600 w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Sign Up</button>
       </div>
     </div>
-  );
+  )
 }
 
 export default Hero;
