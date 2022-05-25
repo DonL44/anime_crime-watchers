@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
+import loadingGif from "../../assets/images/final.gif"
 
 import Logo from '../../assets/images/Sharingan_Triple.png'
 
@@ -79,11 +80,8 @@ const Hero = () => {
               <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
                 <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                   
-                  <img
-                    className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://gifmaker.me/files/download/home/20220525/05/1r8HcNtzutSFloxGE66kL0/output_dBlzGY.gif"
-                    alt=""
-                  />
+                  
+                  <img className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src={loadingGif} alt="wait until the page loads" />
                 </div>
               </div>
             </div>
