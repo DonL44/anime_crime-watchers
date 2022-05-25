@@ -54,7 +54,6 @@ const Profile = () => {
                     <div className="col-sm-4 bg-c-lite-green bg-indigo-600 user-profile">
                         <div className=" text-center text-white">
                             <div className="m-b-25">
-                               
                             </div>
                             <p style={{fontSize: '30px'}}>{user.username}</p>
                             <h2>Profile</h2>
