@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
   
 const BlogPosts = ({ posts, title }) => {
@@ -41,14 +42,16 @@ const BlogPosts = ({ posts, title }) => {
         </div>
         <div className="mt-6 pt-10 grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
           {posts && posts.map((post) => (
-            <div key={post.username}>
+            <div key={post._id}>
               <p className="text-sm text-gray-500">
-                {post.createdAt}
+                {post.username} wrote on {post.createdAt}
               </p>
-              <a href="#" className="mt-2 block">
-                <p className="text-xl font-semibold text-gray-900">{post.postTitle}</p>
-                <p className="mt-3 text-base text-gray-500">{post.postText}</p>
-              </a>
+              <div className="mt-2 block">
+                <Link to={`/post/${post._id}`}>
+                  <p className="text-xl font-semibold text-gray-900">{post.postTitle}</p>
+                  <p className="mt-3 text-base text-gray-500">{post.postText}</p>
+                </Link>
+              </div>
               <div className="mt-3">
                 <p className="text-base font-semibold text-indigo-600 hover:text-indigo-500">
                   Comments: {post.commentCount} || Click to {' '} {post.commentCount ? 'see' : 'start'} the discussion!

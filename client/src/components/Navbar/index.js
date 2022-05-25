@@ -44,10 +44,10 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="hidden space-x-8 md:flex md:ml-10">
-                <a className="text-base font-medium text-white hover:text-gray-300">Dashboard</a>
-                <a className="text-base font-medium text-white hover:text-gray-300">About</a>
-                <a className="text-base font-medium text-white hover:text-gray-300">Resources</a>
-                <a className="text-base font-medium text-white hover:text-gray-300" >ContactUs</a>
+                <Link to="/dashboard" className="text-base font-medium text-white hover:text-gray-300">Dashboard</Link>
+                <a href='#about' className="text-base font-medium text-white hover:text-gray-300">About</a>
+                <a href='#footer-heading' className="text-base font-medium text-white hover:text-gray-300">Resources</a>
+                <a href='#contact' className="text-base font-medium text-white hover:text-gray-300">ContactUs</a>
               </div>
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
@@ -82,10 +82,10 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="hidden space-x-8 md:flex md:ml-10">
-                <a className="text-base font-medium text-white hover:text-gray-300">Dashboard</a>
-                <a className="text-base font-medium text-white hover:text-gray-300">About</a>
-                <a className="text-base font-medium text-white hover:text-gray-300">Resources</a>
-                <a className="text-base font-medium text-white hover:text-gray-300" >ContactUs</a>
+                <Link to="/dashboard" className="text-base font-medium text-white hover:text-gray-300">Dashboard</Link>
+                <a href='#about' className="text-base font-medium text-white hover:text-gray-300">About</a>
+                <a href='#footer-heading' className="text-base font-medium text-white hover:text-gray-300">Resources</a>
+                <a href='#contact' className="text-base font-medium text-white hover:text-gray-300">ContactUs</a>
               </div>
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">

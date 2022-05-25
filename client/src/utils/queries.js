@@ -59,3 +59,30 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const QUERY_ME = gql`
+{
+  me {
+    _id
+    username
+    email
+    friendCount
+    friends {
+      _id
+      username
+    }
+    posts {
+      postTitle
+      postText
+      createdAt
+      commentCount
+      comments {
+        _id
+        createdAt
+        commentText
+        username
+      }
+    }
+  }
+}
+`
