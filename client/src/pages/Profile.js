@@ -1,25 +1,37 @@
 import React from "react";
-import { useParams } from 'react-router-dom'
 import BlogPosts from "../components/BlogPosts";
+import Auth from '../utils/auth';
+import { Navigate, useParams } from 'react-router-dom';
 
 import { useQuery } from '@apollo/client';
-import { QUERY_USER } from "../utils/queries";
+import { QUERY_USER, QUERY_ME } from "../utils/queries";
+import FriendList from "../components/FriendList";
 
 
 const Profile = () => {
   const { username: userParam } = useParams();
-  console.log(userParam)
 
-  const { loading, data } = useQuery(QUERY_USER, {
+  const { loading, data } = useQuery(userParam ? QUERY_USER: QUERY_ME, {
     variables: { username: userParam }
   });
 
-  const user = data?.user || {};
+  const user = data?.me || data?.user || {};
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
+  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+    return <Navigate to="/profile" />;
+  }
+
+  if (!user?.username) {
+    return (
+      <h4>
+        You need to be logged in to see this page. Use the navigation links above to sign up or log in!
+      </h4>
+    );
+  }
   return (
     <>
     <div className="page-content page-container" id="page-content" >
@@ -33,33 +45,32 @@ const Profile = () => {
                             <div className="m-b-25">
                                 <img src="https://img.icons8.com/bubbles/100/000000/user.png" className="img-radius" alt="User-Profile-Image" />
                             </div>
-                            <h6 className="f-w-600"></h6>
-                            <p>Web Designer</p>
+                            <h1 className="f-w-600">{user.username}</h1>
+                            <h2>Profile</h2>
                             <i className=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                         </div>
                     </div>
                     <div className="col-sm-8">
                         <div className="card-block">
-                            <h6 className="m-b-20 p-b-5 b-b-default f-w-600">Username</h6>
+                            <h2 className="m-b-20 p-b-5 b-b-default f-w-600">Blog Posts</h2>
                             <div className="row">
                                 <div className="col-sm-6">
-                                    <p className="m-b-10 f-w-600">Posts</p>
-                                    <h6 className="text-muted f-w-400"></h6>
+                                    <BlogPosts posts={user.posts} />
                                 </div>
                                 <div className="col-sm-6">
-                                    <p className="m-b-10 f-w-600">Friends</p>
+                                    <p className="m-b-10 f-w-600"></p>
                                     <h6 className="text-muted f-w-400"></h6>
                                 </div>
                             </div>
-                            <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Projects</h6>
+                            <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                             <div className="row">
                                 <div className="col-sm-6">
-                                    <p className="m-b-10 f-w-600">Recent</p>
-                                    <h6 className="text-muted f-w-400">Sam Disuja</h6>
-                                </div>
-                                <div className="col-sm-6">
-                                    <p className="m-b-10 f-w-600">Most Viewed</p>
-                                    <h6 className="text-muted f-w-400">Dinoter husainm</h6>
+                                    <h2 className="m-b-10 f-w-600">Friends</h2>
+                                    <FriendList
+                                      username={user.username}
+                                      friendCount={user.friendCount}
+                                      friends={user.friends}
+                                    />
                                 </div>
                             </div>
                         </div>
