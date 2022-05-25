@@ -188,3 +188,14 @@ p {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.require {
+  color: #666;
+}
+label small {
+  color: #999;
+  font-weight: normal;
+}
+
+.blog-button:hover {
+  
+}

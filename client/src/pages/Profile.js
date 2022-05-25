@@ -2,7 +2,7 @@ import React from "react";
 import BlogPosts from "../components/BlogPosts";
 import Auth from '../utils/auth';
 import { Navigate, useParams } from 'react-router-dom';
-
+import BlogForm from "../components/BlogForm";
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
 import FriendList from "../components/FriendList";
@@ -46,7 +46,7 @@ const Profile = () => {
                                 <img src="https://img.icons8.com/bubbles/100/000000/user.png" className="img-radius" alt="User-Profile-Image" />
                             </div>
                             <h1 className="f-w-600">{user.username}</h1>
-                            <h2>Profile</h2>
+                            
                             <i className=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                         </div>
                     </div>
@@ -55,6 +55,7 @@ const Profile = () => {
                             <h2 className="m-b-20 p-b-5 b-b-default f-w-600">Blog Posts</h2>
                             <div className="row">
                                 <div className="col-sm-6">
+                                  {!userParam && <BlogForm />}
                                     <BlogPosts posts={user.posts} />
                                 </div>
                                 <div className="col-sm-6">
