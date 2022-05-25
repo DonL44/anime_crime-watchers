@@ -81,7 +81,7 @@ const Hero = () => {
                   
                   <img
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://media.giphy.com/media/Z9PHV1JPBCYUzZu4uX/giphy.gif"
+                    src="https://gifmaker.me/files/download/home/20220525/05/1r8HcNtzutSFloxGE66kL0/output_dBlzGY.gif"
                     alt=""
                   />
                 </div>
