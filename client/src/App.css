@@ -196,9 +196,6 @@ label small {
   font-weight: normal;
 }
 
-.blog-button:hover {
-  
-
 .friend-btn:hover {
   
   border: #6835cd solid 2px;
@@ -210,4 +207,9 @@ label small {
 .friend-btn {
   margin: 10px;
   padding: 10px;
+}
+
+.blog-button:hover {
+  border: #6835cd solid 2px;
+  border-radius: 10px;
 }

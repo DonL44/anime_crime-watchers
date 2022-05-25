@@ -1,5 +1,6 @@
 import React from "react";
 import BlogPosts from "../components/BlogPosts";
+import BlogForm from "../components/BlogForm";
 import Auth from '../utils/auth';
 import { Navigate, useParams } from 'react-router-dom';
 
