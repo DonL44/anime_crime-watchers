@@ -54,14 +54,10 @@ const Navbar = () => {
                 Blog
               </a>
               <Link
-                to="/signup"
+                to="/"
+                onClick={logout}
                 className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">             
-                Sign Up 
-              </Link>
-              <Link
-                to="/login"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">             
-                Log in 
+                Logout
               </Link>
         </div>
         </>
