@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Group from '../Group';
 
 class Dashboard extends Component {
   state = {
@@ -44,9 +45,13 @@ class Dashboard extends Component {
     return (
 		
       <div className="section relative pt-20 pb-8 md:pt-16 bg-white dark:bg-gray-800">
+        <h2 class="text-2xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100 text-center">
+                <span class="font-light text-center justify-center">Our</span> Heroes (aka Hanzai Watchers):
+            </h2>
         <div className="flex flex-wrap flex-row -mx-4 justify-center">
+          
           {this.state.data.map(data => (
-            <div className="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale" key={data.id.value}>
+            <div className="max-w-full h-auto mx-auto rounded-full bg-gray-60 grayscale" key={data.id.value}>
               <div className="pt-6 text-center">
                 <div className="pt-6 text-center">
                   <div className="relative overflow-hidden px-6">
@@ -82,8 +87,12 @@ class Dashboard extends Component {
           Load More Users
         </button>
       </div>
+
+
     );
   }
 }
+
+
 
 export default Dashboard;
