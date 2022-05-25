@@ -8,6 +8,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 
 
+
 const Signup = () => {
   const [formState, setFormState] = useState({ username: '', email: '', password: '' });
   const [addUser, { error}] = useMutation(ADD_USER);
@@ -19,8 +20,9 @@ const Signup = () => {
       ...formState,
       [name]: value
     });
+    
   };
-
+const navigate = useNavigate();
   // submit form
   const handleFormSubmit = async event => {
     event.preventDefault();
@@ -34,6 +36,7 @@ const Signup = () => {
     } catch (e) {
       console.error(e);
     }
+    navigate('/dashboard')
   };
 
   return (
