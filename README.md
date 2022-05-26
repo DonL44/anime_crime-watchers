@@ -1,4 +1,4 @@
-![The Hanzai Project](anime_crime-watchers/src/assets/images/hanzai_watchers.gif)
+![The Hanzai Project](client/src/assets/images/hanzai_watchers.gif)
 
 By [Tanya](https://github.com/tanyaleepr), [Ashley](https://github.com/ashleyhodge), [Don-EL](https://github.com/DonL44), and [Paul](https://github.com/pshertzi)
 
@@ -11,7 +11,7 @@ The purpose of this application is to report and alert others to crime in your a
 
 # Home Page
 
-![Home Page ScreenShot](anime_crime-watchers/src/assets/images/hanzai_homepage.png)
+![Home Page ScreenShot](client/src/assets/images/homepage_hanzai.png)
 
 # Weapons Used
 
@@ -42,4 +42,4 @@ Use `npm run watch` to start the continuous `webpack` processes and a webserver.
 ### Running tests
 
 You can lint the code with `npm run lint` and run tests with `npm run test`.
-![RunTest](anime_crime-watchers/src/assets/images/backdrop.gif)
+![RunTest](client/src/assets/images/backdrop.gif)
