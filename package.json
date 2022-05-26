@@ -4,7 +4,7 @@
   "description": "![The Hanzai Project](anime_crime-watchers/src/assets/images/hanzai_watchers.gif)",
   "main": "server/server.js",
   "devDependencies": {
-    "concurrently": "^7.2.0"
+    "concurrently": "^7.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
